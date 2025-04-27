@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bot Maison Chevalier &ndash; Portfolio de Jessy Guirado</title>
+  <link rel="stylesheet" href="/assets/css/main.css" />
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <h1 style="color: #58a6ff; margin-bottom: 10px;">Bot &ldquo;Maison Chevalier&rdquo;</h1>
+    <nav>
+      <a href="/index.html" class="btn-retour">&larr; Retour au portfolio</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section>
+      <img src="/assets/images/projects_logos/maison_chevalier_bot.png" alt="Logo Bot Maison Chevalier" class="project-logo" />
+      <p style="text-align: center;">
+        Bot Discord développé en <strong>Node.js</strong> pour automatiser la gestion de la boutique &ldquo;Maison Chevalier&rdquo; sur le serveur SchoolRP : traitement des ventes, gestion des comptes clients, ouverture/fermeture du shop et management des shifts.
+      </p>
+    </section>
+
+    <!-- BADGES TECH -->
+    <section style="text-align: center;">
+      <a href="https://nodejs.org/" class="badge" target="_blank" rel="noopener noreferrer">
+        <img alt="Node.js" src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white" />
+      </a>
+      <a href="https://www.mongodb.com/" class="badge" target="_blank" rel="noopener noreferrer">
+        <img alt="MongoDB" src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" />
+      </a>
+      <a href="https://discord.com/developers" class="badge" target="_blank" rel="noopener noreferrer">
+        <img alt="Discord API" src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" />
+      </a>
+    </section>
+
+    <!-- FONCTIONNALITÉS -->
+    <section>
+      <h2>Fonctionnalités</h2>
+      <div class="features-grid">
+
+        <div class="feature-card">
+          <div style="font-size: 3em; margin-bottom: 10px;">📥</div>
+          <h3>Traitement des ventes</h3>
+          <p>Enregistrement et journalisation automatique des transactions en temps réel.</p>
+        </div>
+
+        <div class="feature-card">
+          <div style="font-size: 3em; margin-bottom: 10px;">👥</div>
+          <h3>Gestion des comptes clients</h3>
+          <p>Création, mise à jour et consultation des profils clients liés Discord/Minecraft.</p>
+        </div>
+
+        <div class="feature-card">
+          <div style="font-size: 3em; margin-bottom: 10px;">🏪</div>
+          <h3>Ouverture / Fermeture</h3>
+          <p>Commandes dédiées pour démarrer et terminer les sessions d'ouverture de la boutique.</p>
+        </div>
+
+        <div class="feature-card">
+          <div style="font-size: 3em; margin-bottom: 10px;">⏱️</div>
+          <h3>Management des shifts</h3>
+          <p>Début, fin et suivi des shifts du personnel avec historique centralisé.</p>
+        </div>
+
+        <div class="feature-card">
+          <div style="font-size: 3em; margin-bottom: 10px;">💰</div>
+          <h3>Gestion des points</h3>
+          <p>Attribution et retrait de points client pour fidélité et promotions.</p>
+        </div>
+
+        <div class="feature-card">
+          <div style="font-size: 3em; margin-bottom: 10px;">🛒</div>
+          <h3>Gestion du stock</h3>
+          <p>Consultation, ajout et retrait d'articles à l'aide d'une interface interactive.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- DÉPÔT PRIVÉ -->
+    <section style="text-align: center;">
+      <p style="margin-top: 40px; font-size: 1.1em; color: #c9d1d9;">
+        Le code source de ce bot est privé.<br />Disponible sur demande pour les recruteurs ou dans un cadre professionnel.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2025 Jessy Guirado &ndash; Portfolio</p>
+  </footer>
+
+  <!-- ANIMATION HEXAGONES -->
+  <script>
+    const body = document.body;
+    for (let i = 0; i < 50; i++) {
+      const hex = document.createElement('div');
+      hex.classList.add('cyber-bg-element');
+      hex.style.top = Math.random() * 100 + 'vh';
+      hex.style.left = Math.random() * 100 + 'vw';
+      const size = 40 + Math.random() * 60;
+      hex.style.width = size + 'px';
+      hex.style.height = size + 'px';
+      hex.style.animationDuration = (20 + Math.random() * 30) + 's';
+      body.appendChild(hex);
+    }
+  </script>
+</body>
+</html>

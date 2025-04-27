@@ -1,11 +1,45 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio Cybersécurité - Jessy Guirado</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
 </head>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const img = document.getElementById('profile-img');
+    const onlineSrc = 'assets/images/online_profile_picture.png';
+    const realSrc = 'assets/images/real_life_picture.png';
+    let showingReal = false;
+
+    function swapImage() {
+      // fade out
+      img.style.opacity = 0;
+      const onFadeOut = () => {
+        img.removeEventListener('transitionend', onFadeOut);
+        // change la source
+        img.src = showingReal ? onlineSrc : realSrc;
+        showingReal = !showingReal;
+        // fade in
+        requestAnimationFrame(() => {
+          img.style.opacity = 1;
+        });
+      };
+      img.addEventListener('transitionend', onFadeOut);
+    }
+
+    // Au chargement : indication cliquabilité
+    setTimeout(swapImage, 500);   // swap vers la vraie photo
+    setTimeout(swapImage, 2000);  // swap retour vers l’online
+
+    // Au clic : swap
+    img.addEventListener('click', swapImage);
+  });
+</script>
+
 <body>
 
   <!-- Geometric background elements -->
@@ -14,11 +48,13 @@
   <div class="cyber-bg-element"></div>
 
   <header>
-    <img src="assets/images/jessy_guirado.jpg" alt="Photo de profil" />
+    <div class="profile-pic-container">
+      <img id="profile-img" src="assets/images/online_profile_picture.png" alt="Photo de profil" />
+    </div>
     <h1>GUIRADO Jessy</h1>
     <p style="margin-top: -10px; color: #58a6ff; font-weight: bold; font-size: 1.3em;">Kowaulsky</p>
     <p>Étudiant en cybersécurité offensive, passionné par le développement informatique.</p>
-  
+
     <div class="intro-buttons">
       <a href="#motivation">Motivation</a>
       <a href="#cv">CV</a>
@@ -26,84 +62,229 @@
       <a href="#experiences">Expériences</a>
       <a href="#projets-personnels">Perso</a>
     </div>
-  </header>  
+  </header>
 
   <section id="motivation">
     <h2>Lettre de motivation</h2>
-    <p>Ma lettre de motivation personnalisée sera bientôt ajoutée ici pour accompagner ma candidature auprès des recruteurs du domaine cybersécurité.</p>
+    <p>Ma lettre de motivation personnalisée sera bientôt ajoutée ici pour accompagner ma candidature auprès des
+      recruteurs du domaine cybersécurité.</p>
   </section>
 
   <section id="cv">
     <h2>Curriculum Vitae</h2>
-  
+
     <div style="display: flex; flex-wrap: wrap; gap: 30px; margin-top: 30px;">
-  
+
       <!-- Formation -->
-      <div style="flex: 1; min-width: 280px; background: #0d1117; padding: 20px; border: 2px solid #58a6ff33; border-radius: 8px; box-shadow: 0 4px 15px rgba(88, 166, 255, 0.2);">
-        <h3 style="color: #58a6ff; border-bottom: 1px solid #30363d; padding-bottom: 10px; margin-bottom: 20px;">Éducation</h3>
-        <ul style="list-style: none; padding: 0;">
-          <li><strong>2024 - 2030</strong><br/>Diplôme d'Ingénieur - Polytech Nantes</li>
-          <li style="margin-top: 15px;"><strong>2021 - 2024</strong><br/>BAC STI2D-SIN (Mention Bien) - Lycée Eugène-Livet, Nantes</li>
-          <li style="margin-top: 15px;"><strong>2018 - 2019</strong><br/>Diplôme national du brevet - PVIS, Vanuatu</li>
-          <li style="margin-top: 15px;"><strong>2014 - 2018</strong><br/>Certificat d'Anglais - Korora Public School, Australie</li>
+      <div
+        style="flex: 1; min-width: 280px; background: #0d1117; padding: 20px; border: 2px solid #58a6ff33; border-radius: 8px; box-shadow: 0 4px 15px rgba(88, 166, 255, 0.2);">
+        <h3 style="color: #58a6ff; border-bottom: 1px solid #30363d; padding-bottom: 10px; margin-bottom: 20px;">
+          Éducation
+        </h3>
+        <ul class="with-icons" style="list-style: none; padding: 0;">
+          <li>
+            <img src="assets/images/formation_icons/polytech.jpg" alt="Polytech Nantes" class="item-icon" />
+            <div class="item-content">
+              <div class="item-date"><strong>2024 - 2030</strong></div>
+              <div class="item-title">Diplôme d'Ingénieur dans l'informatique</div>
+              <div class="item-specs">Polytech Nantes</div>
+            </div>
+          </li>
+          <li>
+            <img src="assets/images/formation_icons/livet.jpeg" alt="Lycée Eugène-Livet" class="item-icon" />
+            <div class="item-content">
+              <div class="item-date"><strong>2021 - 2024</strong></div>
+              <div class="item-title">BAC STI2D-SIN (Mention Bien)</div>
+              <div class="item-specs">Lycée Eugène-Livet, Nantes</div>
+            </div>
+          </li>
+          <li>
+            <img src="assets/images/formation_icons/pvis.png" alt="PVIS Vanuatu" class="item-icon" />
+            <div class="item-content">
+              <div class="item-date"><strong>2018 - 2019</strong></div>
+              <div class="item-title">Diplôme national du brevet (équivalent)</div>
+              <div class="item-specs">PVIS, Vanuatu</div>
+            </div>
+          </li>
+          <li>
+            <img src="assets/images/formation_icons/korora.jpeg" alt="Korora Public School" class="item-icon" />
+            <div class="item-content">
+              <div class="item-date"><strong>2014 - 2018</strong></div>
+              <div class="item-title">Certificat d'Aptitude en anglais</div>
+              <div class="item-specs">Korora Public School, Australie</div>
+            </div>
+          </li>
         </ul>
       </div>
-  
-      <!-- Expérience -->
-      <div style="flex: 1; min-width: 280px; background: #0d1117; padding: 20px; border: 2px solid #58a6ff33; border-radius: 8px; box-shadow: 0 4px 15px rgba(88, 166, 255, 0.2);">
-        <h3 style="color: #58a6ff; border-bottom: 1px solid #30363d; padding-bottom: 10px; margin-bottom: 20px;">Expériences professionnelles</h3>
-        <ul style="list-style: none; padding: 0;">
-          <li><strong>2024 - actuel</strong><br/>Développeur - Ventrys<br/><em>Conception de mods personnalisés et résolution de problèmes techniques.</em></li>
-          <li style="margin-top: 15px;"><strong>2021 - 2024</strong><br/>Rang Omni - TryHackMe<br/><em>Cybersécurité et pentesting sur scénarios réels.</em></li>
-          <li style="margin-top: 15px;"><strong>2013 - 2024</strong><br/>Développeur (étudiant) - CodeAcademy Pro<br/><em>Résolution de problèmes professionnels simulés.</em></li>
+
+      <!-- Expériences professionnelles -->
+      <div
+        style="flex: 1; min-width: 280px; background: #0d1117; padding: 20px; border: 2px solid #58a6ff33; border-radius: 8px; box-shadow: 0 4px 15px rgba(88, 166, 255, 0.2);">
+        <h3 style="color: #58a6ff; border-bottom: 1px solid #30363d; padding-bottom: 10px; margin-bottom: 20px;">
+          Expériences professionnelles
+        </h3>
+        <ul class="with-icons" style="list-style: none; padding: 0;">
+          <li>
+            <img src="assets/images/experiences_icons/ventrys.png" alt="Ventrys" class="item-icon" />
+            <div class="item-content">
+              <div class="item-date"><strong>2024 - Actuel</strong></div>
+              <div class="item-title">Développeur – Ventrys</div>
+              <div class="item-specs"><em>Conception de mods personnalisés et résolution de problèmes techniques.</em>
+              </div>
+            </div>
+          </li>
+          <li>
+            <img src="assets/images/experiences_icons/tryhackme.jpg" alt="TryHackMe" class="item-icon" />
+            <div class="item-content">
+              <div class="item-date"><strong>2021 - 2024</strong></div>
+              <div class="item-title">Rang Omni – TryHackMe</div>
+              <div class="item-specs"><em>Cybersécurité et pentesting sur scénarios réels.</em></div>
+            </div>
+          </li>
+          <li>
+            <img src="assets/images/experiences_icons/codeacademy.png" alt="CodeAcademy Pro" class="item-icon" />
+            <div class="item-content">
+              <div class="item-date"><strong>2013 - 2024</strong></div>
+              <div class="item-title">Développeur (étudiant) – CodeAcademy Pro</div>
+              <div class="item-specs"><em>Résolution de problèmes professionnels simulés.</em></div>
+            </div>
+          </li>
         </ul>
+      </div>
+
+    </div>
+
+    <!-- Compétences techniques (LEDs réseau) -->
+    <div class="skills-section leds">
+      <h3>Compétences techniques</h3>
+
+      <!-- Programmation -->
+      <div class="skill-category">
+        <h4>Programmation</h4>
+        <div class="skill-item">
+          <img src="assets/images/skills_icons/python.webp" alt="Python Icon" class="skill-icon"
+            onerror="this.src='assets/images/icons/fallback.png'" />
+          <div class="skill-content">
+            <span class="skill-name">Golang</span>
+            <p class="skill-description">Langage performant pour le développement backend et les outils réseau, utilisé
+              dans mes projets de cybersécurité comme Apollo.</p>
+            <div class="skill-level" data-level="100"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <img src="assets/images/skills_icons/kotlin.png" alt="Kotlin Icon" class="skill-icon"
+            onerror="this.src='assets/images/icons/fallback.png'" />
+          <div class="skill-content">
+            <span class="skill-name">Kotlin</span>
+            <p class="skill-description">Exploré pour le développement d'applications Android sécurisées, avec une
+              syntaxe concise et moderne.</p>
+            <div class="skill-level" data-level="80"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <img src="assets/images/skills_icons/golang.png" alt="Golang Icon" class="skill-icon"
+            onerror="this.src='assets/images/icons/fallback.png'" />
+          <div class="skill-content">
+            <span class="skill-name">Golang</span>
+            <p class="skill-description">Langage performant pour le développement backend et les outils réseau, utilisé
+              dans mes projets de cybersécurité comme Apollo.</p>
+            <div class="skill-level" data-level="60"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <img src="assets/images/skills_icons/java.png" alt="Java Icon" class="skill-icon"
+            onerror="this.src='assets/images/icons/fallback.png'" />
+          <div class="skill-content">
+            <span class="skill-name">Java</span>
+            <p class="skill-description">Utilisé pour développer des mods Minecraft robustes chez Ventrys, avec un focus
+              sur la performance et la sécurité.</p>
+            <div class="skill-level" data-level="60"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <img src="assets/images/skills_icons/c.png" alt="C Icon" class="skill-icon"
+            onerror="this.src='assets/images/icons/fallback.png'" />
+          <div class="skill-content">
+            <span class="skill-name">C</span>
+            <p class="skill-description">Utilisé pour des projets système nécessitant un contrôle bas niveau, comme
+              l'optimisation de performances.</p>
+            <div class="skill-level" data-level="40"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cybersécurité -->
+      <div class="skill-category">
+        <h4>Cybersécurité</h4>
+        <div class="skill-item">
+          <img src="assets/images/skills_icons/pentesting.jpeg" alt="Pentesting Icon" class="skill-icon"
+            onerror="this.src='assets/images/icons/fallback.png'" />
+          <div class="skill-content">
+            <span class="skill-name">Pentesting</span>
+            <p class="skill-description">Expertise en tests d'intrusion réseau et applicatif, développée via TryHackMe
+              et projets comme NexProbe.</p>
+            <div class="skill-level" data-level="80"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Systèmes -->
+      <div class="skill-category">
+        <h4>Systèmes</h4>
+        <div class="skill-item">
+          <img src="assets/images/skills_icons/linux.png" alt="Linux Icon" class="skill-icon"
+            onerror="this.src='assets/images/icons/fallback.png'" />
+          <div class="skill-content">
+            <span class="skill-name">Linux</span>
+            <p class="skill-description">Administration avancée de systèmes Linux pour serveurs et outils de pentesting,
+              avec scripting bash.</p>
+            <div class="skill-level" data-level="80"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <img src="assets/images/skills_icons/window.webp" alt="Windows Icon" class="skill-icon"
+            onerror="this.src='assets/images/icons/fallback.png'" />
+          <div class="skill-content">
+            <span class="skill-name">Windows</span>
+            <p class="skill-description">Gestion de systèmes Windows, incluant Active Directory et analyse de
+              vulnérabilités réseau.</p>
+            <div class="skill-level" data-level="80"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Langues -->
+      <div class="skill-category">
+        <h4>Langues</h4>
+        <div class="skill-item">
+          <img src="assets/images/skills_icons/english.png" alt="English Icon" class="skill-icon"
+            onerror="this.src='assets/images/icons/fallback.png'" />
+          <div class="skill-content">
+            <span class="skill-name">Anglais</span>
+            <p class="skill-description">Niveau bilingue, certifié en Australie, utilisé dans des contextes techniques
+              et professionnels ainsi que dans la vie quotidienne.</p>
+            <div class="skill-level" data-level="100"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <img src="assets/images/skills_icons/french.png" alt="French Icon" class="skill-icon"
+            onerror="this.src='assets/images/icons/fallback.png'" />
+          <div class="skill-content">
+            <span class="skill-name">Français</span>
+            <p class="skill-description">Langue maternelle.</p>
+            <div class="skill-level" data-level="100"></div>
+          </div>
+        </div>
       </div>
     </div>
-  
-    <!-- Compétences -->
-    <div style="margin-top: 40px; background: #0d1117; padding: 20px; border: 2px solid #58a6ff33; border-radius: 8px; box-shadow: 0 4px 15px rgba(88, 166, 255, 0.2);">
-      <h3 style="color: #58a6ff; border-bottom: 1px solid #30363d; padding-bottom: 10px; margin-bottom: 20px;">Compétences techniques</h3>
-      
-      <div style="margin-bottom: 20px;">
-        <h4 style="color: #58a6ff; margin-bottom: 10px;">Cybersécurité</h4>
-        <ul style="list-style: none; padding: 0;">
-          <li style="display: flex; justify-content: space-between; align-items: center;">Pentesting <span style="color: #f1c40f;">★ ★ ★ ★ ☆</span></li>
-        </ul>
-      </div>
 
-      <div style="margin-bottom: 20px;">
-        <h4 style="color: #58a6ff; margin-bottom: 10px;">Programmation</h4>
-        <ul style="list-style: none; padding: 0;">
-          <li style="display: flex; justify-content: space-between; align-items: center;">Python <span style="color: #f1c40f;">★ ★ ★ ★ ★</span></li>
-          <li style="display: flex; justify-content: space-between; align-items: center;">Golang <span style="color: #f1c40f;">★ ★ ★ ☆ ☆</span></li>
-          <li style="display: flex; justify-content: space-between; align-items: center;">Java <span style="color: #f1c40f;">★ ★ ★ ☆ ☆</span></li>
-          <li style="display: flex; justify-content: space-between; align-items: center;">Kotlin <span style="color: #f1c40f;">★ ★ ☆ ☆ ☆</span></li>
-          <li style="display: flex; justify-content: space-between; align-items: center;">C <span style="color: #f1c40f;">★ ★ ☆ ☆ ☆</span></li>
-        </ul>
-      </div>
-
-      <div style="margin-bottom: 20px;">
-        <h4 style="color: #58a6ff; margin-bottom: 10px;">Systèmes</h4>
-        <ul style="list-style: none; padding: 0;">
-          <li style="display: flex; justify-content: space-between; align-items: center;">Linux <span style="color: #f1c40f;">★ ★ ★ ★ ☆</span></li>
-          <li style="display: flex; justify-content: space-between; align-items: center;">Windows <span style="color: #f1c40f;">★ ★ ★ ★ ☆</span></li>
-        </ul>
-      </div>
-
-      <div>
-        <h4 style="color: #58a6ff; margin-bottom: 10px;">Langues</h4>
-        <ul style="list-style: none; padding: 0;">
-          <li style="display: flex; justify-content: space-between; align-items: center;">Anglais <span style="color: #f1c40f;">★ ★ ★ ★ ★</span></li>
-          <li style="display: flex; justify-content: space-between; align-items: center;">Français <span style="color: #f1c40f;">★ ★ ★ ★ ★</span></li>
-        </ul>
-      </div>
-
-    </div>
-  
     <!-- Centres d'intérêt -->
-    <div style="margin-top: 30px; background: #0d1117; padding: 20px; border: 2px solid #58a6ff33; border-radius: 8px; box-shadow: 0 4px 15px rgba(88, 166, 255, 0.2);">
-      <h3 style="color: #58a6ff; border-bottom: 1px solid #30363d; padding-bottom: 10px; margin-bottom: 20px;">Centres d'intérêt</h3>
-      <ul style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; list-style: none; padding: 0;">
+    <div
+      style="margin-top: 30px; background: #0d1117; padding: 20px; border: 2px solid #58a6ff33; border-radius: 8px; box-shadow: 0 4px 15px rgba(88, 166, 255, 0.2);">
+      <h3 style="color: #58a6ff; border-bottom: 1px solid #30363d; padding-bottom: 10px; margin-bottom: 20px;">Centres
+        d'intérêt</h3>
+      <ul
+        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; list-style: none; padding: 0;">
         <li>Cybersécurité</li>
         <li>Développement logiciel</li>
         <li>Voyager</li>
@@ -112,13 +293,17 @@
         <li>Jet Surfing</li>
       </ul>
     </div>
-  
+
     <!-- Contact -->
-    <div style="margin-top: 30px; background: #0d1117; padding: 20px; border: 2px solid #58a6ff33; border-radius: 8px; box-shadow: 0 4px 15px rgba(88, 166, 255, 0.2);">
-      <h3 style="color: #58a6ff; border-bottom: 1px solid #30363d; padding-bottom: 10px; margin-bottom: 20px;">Contact</h3>
+    <div
+      style="margin-top: 30px; background: #0d1117; padding: 20px; border: 2px solid #58a6ff33; border-radius: 8px; box-shadow: 0 4px 15px rgba(88, 166, 255, 0.2);">
+      <h3 style="color: #58a6ff; border-bottom: 1px solid #30363d; padding-bottom: 10px; margin-bottom: 20px;">Contact
+      </h3>
       <ul style="list-style: none; padding: 0;">
-        <li><strong>Adresse :</strong> 12 Av. de Josselin, 44300 Nantes</li>
-        <li><strong>Email :</strong> jessy.guirado@gmail.com</li>
+        <li>
+          <strong>Email :</strong>
+          <a id="email-link" href="#">[email protégé]</a>
+        </li>
         <li><strong>Téléphone :</strong> +33 6 59 24 89 76</li>
       </ul>
     </div>
@@ -129,151 +314,255 @@
         Télécharger mon CV complet (PDF)
       </a>
     </div>
-  
-  </section>  
-  
-  <section id="projets-scolaires">
-    <h2>Projets scolaires</h2>
-    <ul>
-      <li>Simulations d'intrusions réseau et audits de sécurité.</li>
-      <li>Développement d'outils de monitoring réseau personnalisés.</li>
-      <li>Participation à des projets de cybersécurisation d'applications web.</li>
-    </ul>
   </section>
+
+  <section id="projets-scolaires" class="projects-section">
+    <h2>Projets scolaires</h2>
+    <div class="projects-grid">
+      <!-- Projet Quadtree -->
+      <a href="/projects/quadtree.html" class="project-card-link" target="_blank">
+        <div class="project-card">
+          <img src="/assets/images/projects_logos/quadtree.png" alt="Projet Quadtree" class="project-image">
+          <div class="project-content">
+            <h4 class="project-title">Quadtree – Génération de terrain 2D</h4>
+            <p class="project-description">
+              Développement d'un terrain 2D infini optimisé avec une structure Quadtree et moteur Ebitengine.
+            </p>
+          </div>
+        </div>
+      </a>
+  
+      <!-- Projet Base de Données -->
+      <a href="/projects/basededonnees.html" class="project-card-link" target="_blank">
+        <div class="project-card">
+          <img src="/assets/images/projects_logos/basededonnees.png" alt="Projet Base de Données" class="project-image">
+          <div class="project-content">
+            <h4 class="project-title">SAE – Base de Données 2025</h4>
+            <p class="project-description">
+              Conception et exploitation d'une base de données relationnelle à partir d'open data régionale, normalisée en 3FN.
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </section>
+  
 
   <section id="experiences">
     <h2>Expériences professionnelles</h2>
-  
+
     <div style="display: flex; flex-direction: column; gap: 30px; margin-top: 30px;">
-  
+
       <!-- Ventrys -->
-      <div style="background: #0d1117; padding: 20px; border: 2px solid #58a6ff33; border-radius: 8px; box-shadow: 0 4px 15px rgba(88, 166, 255, 0.3);">
-        <h3 style="color: #58a6ff; margin-bottom: 10px;">Développeur - Ventrys <span style="float: right; color: #8b949e; font-size: 0.9em;">2024 - Actuel</span></h3>
+      <div
+        style="background: #0d1117; padding: 20px; border: 2px solid #58a6ff33; border-radius: 8px; box-shadow: 0 4px 15px rgba(88, 166, 255, 0.3);">
+        <h3 style="color: #58a6ff; margin-bottom: 10px;">Développeur - Ventrys <span
+            style="float: right; color: #8b949e; font-size: 0.9em;">2024 - Actuel</span></h3>
         <p><strong>Environnement :</strong> Minecraft Médiéval Fantasy Roleplay</p>
-        <p><strong>Mission principale :</strong> Développement complet des systèmes du serveur, incluant la création de mods personnalisés pour les jobs, créatures (mobs), interactions et mécaniques de jeu.</p>
+        <p><strong>Mission principale :</strong> Développement complet des systèmes du serveur, incluant la création de
+          mods personnalisés pour les jobs, créatures (mobs), interactions et mécaniques de jeu.</p>
         <p><strong>Technologies :</strong> Java, Gradle, Fabric, Visual Studio Code</p>
-        <p><strong>Travail d'équipe :</strong> Collaboration avec d'autres développeurs pour assurer la cohérence du système global et la sécurité des fonctionnalités mises en place.</p>
+        <p><strong>Travail d'équipe :</strong> Collaboration avec d'autres développeurs pour assurer la cohérence du
+          système global et la sécurité des fonctionnalités mises en place.</p>
       </div>
-  
+
       <!-- TryHackMe -->
-      <div style="background: #0d1117; padding: 20px; border: 2px solid #58a6ff33; border-radius: 8px; box-shadow: 0 4px 15px rgba(88, 166, 255, 0.3);">
-        <h3 style="color: #58a6ff; margin-bottom: 10px;">Rang Omni - TryHackMe <span style="float: right; color: #8b949e; font-size: 0.9em;">2021 - 2024</span></h3>
-        <p><strong>Activités :</strong> Formation intensive en cybersécurité offensive avec résolution de challenges techniques variés (injection, élévation de privilèges, analyse réseau, exploitation de vulnérabilités).</p>
-        <p><strong>Profil :</strong> <a href="https://tryhackme.com/p/Kowaulsky" target="_blank" style="color: #58a6ff;">tryhackme.com/p/Kowaulsky</a></p>
-        <p><strong>Travail :</strong> Scénarios pratiques avec analyse de systèmes vulnérables, rapports de vulnérabilité et documentation d'attaques simulées.</p>
+      <div
+        style="background: #0d1117; padding: 20px; border: 2px solid #58a6ff33; border-radius: 8px; box-shadow: 0 4px 15px rgba(88, 166, 255, 0.3);">
+        <h3 style="color: #58a6ff; margin-bottom: 10px;">Rang Omni - TryHackMe <span
+            style="float: right; color: #8b949e; font-size: 0.9em;">2021 - 2024</span></h3>
+        <p><strong>Activités :</strong> Formation intensive en cybersécurité offensive avec résolution de challenges
+          techniques variés (injection, élévation de privilèges, analyse réseau, exploitation de vulnérabilités).</p>
+        <p><strong>Profil :</strong> <a href="https://tryhackme.com/p/Kowaulsky" target="_blank"
+            style="color: #58a6ff;">tryhackme.com/p/Kowaulsky</a></p>
+        <p><strong>Travail :</strong> Scénarios pratiques avec analyse de systèmes vulnérables, rapports de
+          vulnérabilité et documentation d'attaques simulées.</p>
         <p><strong>Compétences acquises :</strong> Pentesting, OSINT, exploitation, forensic de base.</p>
       </div>
-  
+
       <!-- CodeAcademy Pro -->
-      <div style="background: #0d1117; padding: 20px; border: 2px solid #58a6ff33; border-radius: 8px; box-shadow: 0 4px 15px rgba(88, 166, 255, 0.3);">
-        <h3 style="color: #58a6ff; margin-bottom: 10px;">Développeur (étudiant) - CodeAcademy Pro <span style="float: right; color: #8b949e; font-size: 0.9em;">2013 - 2024</span></h3>
-        <p><strong>Formation :</strong> Apprentissage des bases du développement logiciel et des concepts fondamentaux d'algorithmique et de structures de données (arbres binaires, etc.).</p>
+      <div
+        style="background: #0d1117; padding: 20px; border: 2px solid #58a6ff33; border-radius: 8px; box-shadow: 0 4px 15px rgba(88, 166, 255, 0.3);">
+        <h3 style="color: #58a6ff; margin-bottom: 10px;">Développeur (étudiant) - CodeAcademy Pro <span
+            style="float: right; color: #8b949e; font-size: 0.9em;">2013 - 2024</span></h3>
+        <p><strong>Formation :</strong> Apprentissage des bases du développement logiciel et des concepts fondamentaux
+          d'algorithmique et de structures de données (arbres binaires, etc.).</p>
         <p><strong>Technologies :</strong> Python, Golang, initiation au C++</p>
-        <p><strong>Travail :</strong> Développement d'applications simples et résolution de problèmes pratiques pour renforcer la logique de programmation.</p>
+        <p><strong>Travail :</strong> Développement d'applications simples et résolution de problèmes pratiques pour
+          renforcer la logique de programmation.</p>
       </div>
-  
+
     </div>
-  </section>  
+  </section>
 
   <section id="projets-personnels">
     <h2>Projets personnels & Passions</h2>
-  
+
     <!-- Sous-section Projets personnels -->
     <div style="margin-top: 40px;">
-      <h3 style="color: #58a6ff; border-bottom: 2px solid #30363d; padding-bottom: 8px; margin-bottom: 20px; font-size: 1.6em;">Projets personnels</h3>
+      <h3
+        style="color: #58a6ff; border-bottom: 2px solid #30363d; padding-bottom: 8px; margin-bottom: 20px; font-size: 1.6em;">
+        Projets personnels</h3>
+
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
-  
+
         <!-- NexProbe -->
-        <div style="background: #0d1117; border: 2px solid #58a6ff33; border-radius: 8px; box-shadow: 0 4px 15px rgba(88, 166, 255, 0.3); overflow: hidden;">
-          <img src="assets/images/NEXPROBE.png" alt="NexProbe Logo" style="width: 100%; height: auto;">
-          <div style="padding: 15px;">
-            <h4 style="color: #58a6ff; margin-bottom: 10px;">NexProbe</h4>
-            <p>Outil de pentesting avancé automatisant la reconnaissance réseau avec Nmap, smbmap et ldapsearch.</p>
-            <p style="font-size: 0.9em;"><strong>Technologies :</strong> Python, Linux</p>
-            <a href="https://github.com/Kowaulsky/NexProbe" target="_blank" style="color: #58a6ff;">Voir sur GitHub</a>
+        <a href="/projects/nexprobe.html" target="_blank" class="project-card-link">
+          <div class="project-card">
+            <img src="assets/images/projects_logos/nexprobe.png" alt="NexProbe Logo" class="project-image">
+            <div class="project-content">
+              <h4 class="project-title">NexProbe</h4>
+              <p class="project-description">
+                Outil de pentesting avancé automatisant la reconnaissance réseau avec Nmap, smbmap et ldapsearch.
+              </p>
+              <p class="project-tech"><strong>Technologies :</strong> Python, Linux</p>
+            </div>
           </div>
-        </div>
-  
+        </a>
+
         <!-- Apollo -->
-        <div style="background: #0d1117; border: 2px solid #58a6ff33; border-radius: 8px; box-shadow: 0 4px 15px rgba(88, 166, 255, 0.3); overflow: hidden;">
-          <img src="assets/images/apollo.png" alt="Apollo Logo" style="width: 100%; height: auto;">
-          <div style="padding: 15px;">
-            <h4 style="color: #58a6ff; margin-bottom: 10px;">Apollo</h4>
-            <p>Alternative privée d'Aircrack-ng développée en Go pour les audits Wi-Fi légaux.</p>
-            <p style="font-size: 0.9em;"><strong>Technologies :</strong> Golang</p>
+        <a href="/projects/apollo.html" target="_blank" class="project-card-link">
+          <div class="project-card">
+            <img src="assets/images/projects_logos/apollo.png" alt="Apollo Logo" class="project-image">
+            <div class="project-content">
+              <h4 class="project-title">Apollo</h4>
+              <p class="project-description">
+                Alternative privée d'Aircrack-ng développée en Go pour les audits Wi-Fi légaux.
+              </p>
+              <p class="project-tech"><strong>Technologies :</strong> Golang</p>
+            </div>
           </div>
-        </div>
-  
+        </a>
+
         <!-- Bot Discord Shop -->
-        <div style="background: #0d1117; border: 2px solid #58a6ff33; border-radius: 8px; box-shadow: 0 4px 15px rgba(88, 166, 255, 0.3); overflow: hidden;">
-          <img src="assets/images/maison_chevalier_bot.png" alt="Shop Bot Logo" style="width: 100%; height: auto;">
-          <div style="padding: 15px;">
-            <h4 style="color: #58a6ff; margin-bottom: 10px;">Bot "Maison Chevalier"</h4>
-            <p>Bot personnalisé pour automatiser la gestion d'une boutique sur serveur roleplay : stock, horaires, comptes clients.</p>
-            <p style="font-size: 0.9em;"><strong>Technologies :</strong> Node.js, Discord.js</p>
+        <a href="/projects/botdiscord.html"  target="_blank" class="project-card-link">
+          <div class="project-card">
+            <img src="assets/images/projects_logos/maison_chevalier_bot.png" alt="Bot Maison Chevalier Logo"
+              class="project-image">
+            <div class="project-content">
+              <h4 class="project-title">Bot "Maison Chevalier"</h4>
+              <p class="project-description">
+                Bot personnalisé pour automatiser la gestion d'une boutique sur serveur roleplay : stock, horaires,
+                comptes clients.
+              </p>
+              <p class="project-tech"><strong>Technologies :</strong> Node.js, Discord.js</p>
+            </div>
+          </div>
+        </a>
+
+        <!-- Autres outils cybersécurité -->
+        <div style="grid-column: 1 / -1;" class="project-card">
+          <div class="project-content"
+            style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+            <h4 class="project-title">Autres outils de cybersécurité</h4>
+            <p class="project-description" style="max-width: 600px;">
+              Développement d'outils pour tests DDoS/DoS et simulation de charges contrôlées pour audits réseau.
+            </p>
+            <p class="project-tech" style="max-width: 600px;">
+              <strong>Objectif :</strong> Stress testing et résilience réseau.
+            </p>
           </div>
         </div>
-  
-        <!-- Autres outils cyber -->
-        <div style="grid-column: 1 / -1; background: #0d1117; border: 2px solid #58a6ff33; border-radius: 8px; box-shadow: 0 4px 15px rgba(88, 166, 255, 0.3); padding: 30px; display: flex; flex-direction: column; align-items: center; text-align: center;">
-            <h4 style="color: #58a6ff; margin-bottom: 15px;">Autres outils de cybersécurité</h4>
-            <p style="max-width: 600px;">Développement d'outils pour tests DDoS/DoS et simulation de charges contrôlées pour audits réseau.</p>
-            <p style="font-size: 0.9em; max-width: 600px;"><strong>Objectif :</strong> Stress testing et résilience réseau.</p>
-        </div>
-  
+
       </div>
     </div>
-  
+
     <!-- Sous-section Passions -->
     <div style="margin-top: 60px;">
-        <h3 style="color: #58a6ff; border-bottom: 2px solid #30363d; padding-bottom: 8px; margin-bottom: 20px; font-size: 1.6em;">Passions personnelles</h3>
-    
-        <div style="background: #0d1117; border: 2px solid #58a6ff33; border-radius: 8px; box-shadow: 0 4px 15px rgba(88, 166, 255, 0.3); padding: 25px; line-height: 1.6;">
-    
+      <h3
+        style="color: #58a6ff; border-bottom: 2px solid #30363d; padding-bottom: 8px; margin-bottom: 20px; font-size: 1.6em;">
+        Passions personnelles</h3>
+
+      <div
+        style="background: #0d1117; border: 2px solid #58a6ff33; border-radius: 8px; box-shadow: 0 4px 15px rgba(88, 166, 255, 0.3); padding: 25px; line-height: 1.6;">
+
         <h4 style="color: #58a6ff; margin-bottom: 8px;">Homebrewing</h4>
-        <p>Passionné par la fabrication artisanale d'hydromel, de cidre et de vin, j'ai développé de nombreuses recettes pour famille et amis, en expérimentant des procédés de fermentation variés.</p>
-    
+        <p>Passionné par la fabrication artisanale d'hydromel, de cidre et de vin, j'ai développé de nombreuses recettes
+          pour famille et amis, en expérimentant des procédés de fermentation variés.</p>
+
         <h4 style="color: #58a6ff; margin-top: 20px; margin-bottom: 8px;">Philosophie & Sociologie</h4>
-        <p>J'explore régulièrement les concepts sociaux et philosophiques à travers des recherches personnelles approfondies. Cette curiosité m'aide à mieux comprendre les comportements humains, un atout précieux notamment pour l'ingénierie sociale en cybersécurité.</p>
-    
+        <p>J'explore régulièrement les concepts sociaux et philosophiques à travers des recherches personnelles
+          approfondies. Cette curiosité m'aide à mieux comprendre les comportements humains, un atout précieux notamment
+          pour l'ingénierie sociale en cybersécurité.</p>
+
         <h4 style="color: #58a6ff; margin-top: 20px; margin-bottom: 8px;">Jet Surfing</h4>
-        <p>Sport pratiqué principalement lors de mes années en Australie et au Vanuatu, combinant vitesse et maîtrise de l'environnement nautique. J'ai pour objectif de reprendre cette activité dès que possible en France.</p>
-    
+        <p>Sport pratiqué principalement lors de mes années en Australie et au Vanuatu, combinant vitesse et maîtrise de
+          l'environnement nautique. J'ai pour objectif de reprendre cette activité dès que possible en France.</p>
+
         <h4 style="color: #58a6ff; margin-top: 20px; margin-bottom: 8px;">Langue construite : Nuveldan</h4>
-        <p>Créateur de Nuveldan, une langue construite originale s'inspirant des langues celtiques et germaniques, dotée d'une grammaire et d'un vocabulaire complexes pour en faire un système linguistique unique et indépendant.</p>
-    
-        </div>
+        <p>Créateur de Nuveldan, une langue construite originale s'inspirant des langues celtiques et germaniques, dotée
+          d'une grammaire et d'un vocabulaire complexes pour en faire un système linguistique unique et indépendant.</p>
+
+      </div>
     </div>
-  
+
   </section>
-   
+
   <footer>
+    <div class="footer-social">
+      <a href="https://github.com/Kowaulsky" target="_blank" rel="noopener noreferrer">
+        <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+      </a>
+      <a href="https://discord.com/users/345417381520343050" target="_blank" rel="noopener noreferrer">
+        <img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord">
+      </a>
+      <a href="https://tryhackme.com/p/Kowaulsky" target="_blank" rel="noopener noreferrer">
+        <img src="https://img.shields.io/badge/TryHackMe-0A0A0A?style=for-the-badge&logo=tryhackme&logoColor=white" alt="TryHackMe">
+      </a>
+    </div>
+    
     <p>© 2025 GUIRAO Jessy - Portfolio</p>
   </footer>
 
   <script>
+    // Skill item flip interaction
+    const skillItems = document.querySelectorAll('.skill-item');
+    skillItems.forEach(item => {
+      item.addEventListener('click', () => {
+        item.classList.toggle('flipped');
+      });
+    });
+  </script>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+
+  <script>
     const numberOfHexagons = 50; // Nombre total d'hexagones
     const body = document.body;
-  
+
     for (let i = 0; i < numberOfHexagons; i++) {
       const hex = document.createElement('div');
       hex.classList.add('cyber-bg-element');
-  
+
       // Positionnement aléatoire
       hex.style.top = Math.random() * 100 + 'vh';
       hex.style.left = Math.random() * 100 + 'vw';
-  
+
       // Taille aléatoire
       const size = Math.random() * 60 + 40; // Entre 40px et 100px
       hex.style.width = size + 'px';
       hex.style.height = size + 'px';
-  
+
       // Vitesse d'animation aléatoire
       const duration = Math.random() * 30 + 20; // 20 à 50 secondes
       hex.style.animationDuration = duration + 's';
-  
+
       body.appendChild(hex);
     }
-  </script>  
+
+
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const user = 'jessy.guirado';       // votre utilisateur
+      const domain = 'protonmail.com';       // votre domaine
+      const email = user + '@' + domain;
+      const a = document.getElementById('email-link');
+      a.href = 'mailto:' + email;
+      a.textContent = email;
+    });
+  </script>
 </body>
+
 </html>

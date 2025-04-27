@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apollo – Portfolio de Jessy Guirado</title>
+  <link rel="stylesheet" href="/assets/css/main.css" />
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <h1 style="color: #58a6ff; margin-bottom: 10px;">Apollo</h1>
+    <nav>
+      <a href="/index.html" class="btn-retour">&larr; Retour au portfolio</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section>
+      <img src="/assets/images/projects_logos/apollo.png" alt="Logo Apollo" class="project-logo" />
+      <p style="text-align: center;">
+        Apollo est une alternative privée à <strong>Aircrack‑ng</strong> développée en Go pour réaliser des audits Wi‑Fi légaux : capture de handshakes, injection de paquets et analyses avancées.
+      </p>
+    </section>
+
+    <!-- BADGES TECH -->
+    <section style="text-align: center;">
+      <a href="https://go.dev/" class="badge" target="_blank">
+        <img alt="Go" src="https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white" />
+      </a>
+      <a href="https://www.aircrack-ng.org/" class="badge" target="_blank">
+        <img alt="Aircrack-ng" src="https://img.shields.io/badge/Aircrack--ng-000000?style=for-the-badge&logo=aircrack-ng&logoColor=white" />
+      </a>
+      <a href="https://www.kernel.org/" class="badge" target="_blank">
+        <img alt="Linux" src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" />
+      </a>
+    </section>
+
+    <!-- FONCTIONNALITÉS -->
+    <section>
+      <h2>Fonctionnalités</h2>
+      <div class="features-grid">
+
+        <div class="feature-card">
+          <div style="font-size: 3em; margin-bottom: 10px;">🔍</div>
+          <h3>Scan et découverte</h3>
+          <p>Analyse des réseaux Wi‑Fi environnants et extraction des informations (SSID, canal, signal).</p>
+        </div>
+
+        <div class="feature-card">
+          <div style="font-size: 3em; margin-bottom: 10px;">📥</div>
+          <h3>Capture de handshakes</h3>
+          <p>Enregistrement des échanges WPA/WPA2 pour tests de robustesse par force brute.</p>
+        </div>
+
+        <div class="feature-card">
+          <div style="font-size: 3em; margin-bottom: 10px;">⚙️</div>
+          <h3>Injection de paquets</h3>
+          <p>Envoi de paquets de désauthentification pour sélectionner les cibles et forcer les handshakes.</p>
+        </div>
+
+        <div class="feature-card">
+          <div style="font-size: 3em; margin-bottom: 10px;">📊</div>
+          <h3>Rapports détaillés</h3>
+          <p>Génération automatique de rapports avec statistiques de succès et temps d’analyse.</p>
+        </div>
+
+        <div class="feature-card">
+          <div style="font-size: 3em; margin-bottom: 10px;">🔒</div>
+          <h3>Sécurité renforcée</h3>
+          <p>Fonctionne entièrement en local sans dépendances externes non contrôlées.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- DÉPÔT PRIVÉ -->
+    <section style="text-align: center;">
+      <p style="margin-top: 40px; font-size: 1.1em; color: #c9d1d9;">
+        Le code source d'Apollo est privé.<br />Accessible sur demande aux recruteurs ou en contexte professionnel.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2025 Jessy Guirado &ndash; Portfolio</p>
+  </footer>
+
+  <!-- ANIMATION HEXAGONES -->
+  <script>
+    const body = document.body;
+    for (let i = 0; i < 50; i++) {
+      const hex = document.createElement('div');
+      hex.classList.add('cyber-bg-element');
+      hex.style.top = Math.random() * 100 + 'vh';
+      hex.style.left = Math.random() * 100 + 'vw';
+      const size = 40 + Math.random() * 60;
+      hex.style.width = size + 'px';
+      hex.style.height = size + 'px';
+      hex.style.animationDuration = (20 + Math.random() * 30) + 's';
+      body.appendChild(hex);
+    }
+  </script>
+</body>
+</html>

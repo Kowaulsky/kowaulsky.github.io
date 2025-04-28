@@ -200,6 +200,36 @@ header nav {
   background: linear-gradient(145deg, #1f6feb 0%, #58a6ff 100%);
 }
 
+.lang-switch {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+.lang-switch a {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  font-size: 0.9em;
+  color: #0d1117;
+  background: #58a6ff;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.lang-switch a:hover {
+  background: #1f6feb;
+}
+
+.lang-switch .lang-icon {
+  width: 18px;
+  height: auto;
+  margin-right: 6px;
+}
+
 /* --------------------
    Sections
 -------------------- */

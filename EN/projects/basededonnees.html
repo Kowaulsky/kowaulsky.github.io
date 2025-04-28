@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAE Database – Jessy Guirado Portfolio</title>
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1 style="color: #58a6ff; margin-bottom: 10px;">SAE – Database</h1>
+    <nav>
+      <a href="/EN/index.html" class="btn-retour">&larr; Back to Portfolio</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section>
+      <img src="/assets/images/projects_logos/basededonnees.png" alt="Database Logo" class="project-logo">
+      <p style="text-align: center;">
+        Academic project completed as part of the 2025 BUT Computer Science program, aimed at importing, cleaning,
+        decomposing, structuring, and exploiting a large dataset on electric vehicle charging stations in the Pays de la Loire region.
+        The objective was to master all stages of database design and manipulation in Third Normal Form (3NF).
+      </p>
+    </section>
+
+    <!-- TECH BADGES -->
+    <section style="text-align: center;">
+      <a href="https://www.oracle.com/database/" class="badge" target="_blank">
+        <img alt="Oracle Database" src="https://img.shields.io/badge/Oracle-Database-F80000?style=for-the-badge&logo=oracle&logoColor=white">
+      </a>
+      <a href="https://www.datapaysdelaloire.fr/" class="badge" target="_blank">
+        <img alt="Data Pays de la Loire" src="https://img.shields.io/badge/Data-Pays%20de%20la%20Loire-0055A4?style=for-the-badge">
+      </a>
+    </section>
+
+    <!-- DETAILED FEATURES -->
+    <section>
+      <h2>Detailed Features</h2>
+      <div class="features-grid">
+    
+        <div class="feature-card">
+          <div style="font-size: 3em; margin-bottom: 10px;">📥</div>
+          <h3>CSV Import &amp; Cleaning</h3>
+          <p>Import raw data, correct errors, standardize formats, and perform thorough cleaning.</p>
+        </div>
+    
+        <div class="feature-card">
+          <div style="font-size: 3em; margin-bottom: 10px;">🛠️</div>
+          <h3>3NF Decomposition</h3>
+          <p>Split the main table into multiple normalized tables with primary and foreign keys.</p>
+        </div>
+    
+        <div class="feature-card">
+          <div style="font-size: 3em; margin-bottom: 10px;">🔐</div>
+          <h3>Access Management</h3>
+          <p>Implement GRANT SELECT/UPDATE permissions and integrity constraints to secure data access.</p>
+        </div>
+    
+        <div class="feature-card">
+          <div style="font-size: 3em; margin-bottom: 10px;">📊</div>
+          <h3>Advanced SQL Analysis</h3>
+          <p>Complex queries to generate precise statistics on stations, operators, and developers.</p>
+        </div>
+    
+        <div class="feature-card">
+          <div style="font-size: 3em; margin-bottom: 10px;">📄</div>
+          <h3>View Creation</h3>
+          <p>Department-level and global summary views to facilitate data analysis and automate reporting.</p>
+        </div>
+    
+        <div class="feature-card">
+          <div style="font-size: 3em; margin-bottom: 10px;">🌍</div>
+          <h3>Collaborative Work</h3>
+          <p>Organized by department, rigorous conflict management, and mutual validation of datasets.</p>
+        </div>
+    
+      </div>
+    </section>    
+
+    <!-- PRIVATE SQL CODE NOTICE -->
+    <section style="text-align: center;">
+      <p style="margin-top: 40px; font-size: 1.1em; color: #c9d1d9;">
+        The complete SQL code for this project is private, in accordance with academic guidelines.<br>
+        It can only be presented during a professional interview or in an authorized academic setting.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2025 Jessy Guirado – Portfolio</p>
+  </footer>
+
+  <!-- HEXAGON ANIMATION -->
+  <script>
+    const body = document.body;
+    for (let i = 0; i < 50; i++) {
+      const hex = document.createElement('div');
+      hex.classList.add('cyber-bg-element');
+      hex.style.top = Math.random() * 100 + 'vh';
+      hex.style.left = Math.random() * 100 + 'vw';
+      const size = 40 + Math.random() * 60;
+      hex.style.width = size + 'px';
+      hex.style.height = size + 'px';
+      hex.style.animationDuration = (20 + Math.random() * 30) + 's';
+      body.appendChild(hex);
+    }
+  </script>
+
+</body>
+</html>

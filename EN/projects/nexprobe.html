@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NexProbe – Jessy Guirado Portfolio</title>
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1 style="color: #58a6ff; margin-bottom: 10px;">NexProbe</h1>
+    <nav>
+      <a href="/EN/index.html" class="btn-retour">← Back to Portfolio</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section>
+      <img src="/assets/images/projects_logos/nexprobe.png" alt="NexProbe Logo" class="project-logo">
+      <p style="text-align: center;">
+        NexProbe is a network reconnaissance tool designed to automate information-gathering phases during penetration tests.
+        Integrating Nmap, smbmap, and ldapsearch, it offers a streamlined workflow and real-time feedback to quickly assess infrastructures.
+      </p>
+    </section>
+
+    <!-- TECH BADGES -->
+    <section style="text-align: center;">
+      <a href="https://www.python.org/downloads/" class="badge" target="_blank" rel="noopener noreferrer">
+        <img alt="Python" src="https://img.shields.io/badge/python%203-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54">
+      </a>
+      <a href="https://www.linux.org/pages/download/" class="badge" target="_blank" rel="noopener noreferrer">
+        <img alt="Linux" src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black">
+      </a>
+    </section>
+
+    <!-- FEATURES -->
+    <section>
+      <h2>Features</h2>
+      <div class="features-grid">
+    
+        <div class="feature-card">
+          <div style="font-size: 3em; margin-bottom: 10px;">🛠️</div>
+          <h3>Centralized Integration</h3>
+          <p>Orchestration of Nmap, smbmap, and ldapsearch from a single interface.</p>
+        </div>
+    
+        <div class="feature-card">
+          <div style="font-size: 3em; margin-bottom: 10px;">🤖</div>
+          <h3>Smart Enumeration</h3>
+          <p>Automatic correlation and analysis of results.</p>
+        </div>
+    
+        <div class="feature-card">
+          <div style="font-size: 3em; margin-bottom: 10px;">⚙️</div>
+          <h3>Customizable Profiles</h3>
+          <p>Adapt scans to specific needs (protocols, services).</p>
+        </div>
+    
+        <div class="feature-card">
+          <div style="font-size: 3em; margin-bottom: 10px;">⏱️</div>
+          <h3>Real-Time Feedback</h3>
+          <p>Monitor progress and receive alerts during scans.</p>
+        </div>
+    
+        <div class="feature-card">
+          <div style="font-size: 3em; margin-bottom: 10px;">📊</div>
+          <h3>Detailed Reports</h3>
+          <p>Generate clear reports including raw outputs and summaries.</p>
+        </div>
+    
+      </div>
+    </section>    
+
+    <!-- CALL TO ACTION -->
+    <section style="text-align: center;">
+      <a href="https://github.com/Kowaulsky/NexProbe" class="download-cv" style="margin: 10px;">View GitHub Page</a>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2025 Jessy Guirado – Portfolio</p>
+  </footer>
+
+  <!-- HEXAGON ANIMATION -->
+  <script>
+    const body = document.body;
+    for (let i = 0; i < 50; i++) {
+      const hex = document.createElement('div');
+      hex.classList.add('cyber-bg-element');
+      hex.style.top = Math.random() * 100 + 'vh';
+      hex.style.left = Math.random() * 100 + 'vw';
+      const size = 40 + Math.random() * 60;
+      hex.style.width = size + 'px';
+      hex.style.height = size + 'px';
+      hex.style.animationDuration = (20 + Math.random() * 30) + 's';
+      body.appendChild(hex);
+    }
+  </script>
+</body>
+</html>

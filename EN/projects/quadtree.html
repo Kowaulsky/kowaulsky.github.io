@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quadtree – Jessy Guirado Portfolio</title>
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1 style="color: #58a6ff; margin-bottom: 10px;">Quadtree</h1>
+    <nav>
+      <a href="/EN/index.html" class="btn-retour">← Back to Portfolio</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section>
+      <img src="/assets/images/projects_logos/quadtree.png" alt="Quadtree Logo" class="project-logo">
+      <p style="text-align: center;">
+        This project, completed as part of the BUT Computer Science program, aimed to design an infinite 2D terrain
+        generation engine optimized using a Quadtree structure. It explored dynamic display and storage management
+        of large areas while ensuring high performance in rendering and memory usage.
+      </p>
+    </section>
+
+    <!-- TECH BADGES -->
+    <section style="text-align: center;">
+      <a href="https://go.dev/" class="badge" target="_blank" rel="noopener noreferrer">
+        <img alt="Go" src="https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white">
+      </a>
+      <a href="https://ebitengine.org/" class="badge" target="_blank" rel="noopener noreferrer">
+        <img alt="Ebitengine" src="https://img.shields.io/badge/Ebitengine-000000?style=for-the-badge&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAAUVBMVEUAAAD///8AAADk5OQAAADz8/P6+vrk5OQ/Pz/k5OTk5OT///+hoaGhoaGhoaH5+fnn5+f4+PjX19eAgICFhYV4eHiCgoIuLi6SkpJubm5ra2uxsbFYWFgZGRnHx8fpX01VAAAAEHRSTlMABAJ1sC7o+vn79/Pk29O+Q3v0IgAAAFRJREFUGFdjYMAKBhYWBhYWBiAQBAkMBDEShg4QCEGQiQxSBkGEFApRCR4mDQLIMAwYDoTGMgaBjYMIWVkYGRjQkAeFYf+GGANR+GAAAAAElFTkSuQmCC">
+      </a>
+    </section>
+
+    <!-- DETAILED FEATURES -->
+    <section>
+      <h2>Detailed Features</h2>
+      <div class="features-grid">
+    
+        <div class="feature-card">
+          <div style="font-size: 3em; margin-bottom: 10px;">🌐</div>
+          <h3>Infinite World Generation</h3>
+          <p>Create a theoretically infinite 2D environment based on controlled procedural logic.</p>
+        </div>
+    
+        <div class="feature-card">
+          <div style="font-size: 3em; margin-bottom: 10px;">🧩</div>
+          <h3>Quadtree Memory Optimization</h3>
+          <p>Use a Quadtree structure to divide space and keep only active zones in memory.</p>
+        </div>
+    
+        <div class="feature-card">
+          <div style="font-size: 3em; margin-bottom: 10px;">🎮</div>
+          <h3>Dynamic Camera</h3>
+          <p>Smooth player movement with intelligent camera management for optimal navigation comfort.</p>
+        </div>
+    
+        <div class="feature-card">
+          <div style="font-size: 3em; margin-bottom: 10px;">📦</div>
+          <h3>Interactive Teleporters</h3>
+          <p>Add portals that allow the player to quickly move from one point to another on the map.</p>
+        </div>
+    
+        <div class="feature-card">
+          <div style="font-size: 3em; margin-bottom: 10px;">🔍</div>
+          <h3>Environment Zoom</h3>
+          <p>Zoom in and out to explore terrain details at different scales.</p>
+        </div>
+    
+        <div class="feature-card">
+          <div style="font-size: 3em; margin-bottom: 10px;">💾</div>
+          <h3>Save &amp; Load</h3>
+          <p>Export and import the generated world to ensure session persistence.</p>
+        </div>
+    
+        <div class="feature-card">
+          <div style="font-size: 3em; margin-bottom: 10px;">🎨</div>
+          <h3>Animated Environments</h3>
+          <p>Add dynamic animations (e.g., water waves) to make the world more immersive and alive.</p>
+        </div>
+    
+        <div class="feature-card">
+          <div style="font-size: 3em; margin-bottom: 10px;">🛠️</div>
+          <h3>Engine Extensibility</h3>
+          <p>Modular design that allows easy addition of new terrain elements or gameplay features in the future.</p>
+        </div>
+    
+      </div>
+    </section>
+    
+    <!-- PRIVATE CODE NOTICE -->
+    <section style="text-align: center;">
+      <p style="margin-top: 40px; font-size: 1.1em; color: #c9d1d9;">
+        The source code for this project is private because it is an academic project completed as part of the BUT Computer Science program.<br>
+        It can be reviewed upon request in a professional or academic context.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2025 Jessy Guirado – Portfolio</p>
+  </footer>
+
+  <!-- HEXAGON ANIMATION -->
+  <script>
+    const body = document.body;
+    for (let i = 0; i < 50; i++) {
+      const hex = document.createElement('div');
+      hex.classList.add('cyber-bg-element');
+      hex.style.top = Math.random() * 100 + 'vh';
+      hex.style.left = Math.random() * 100 + 'vw';
+      const size = 40 + Math.random() * 60;
+      hex.style.width = size + 'px';
+      hex.style.height = size + 'px';
+      hex.style.animationDuration = (20 + Math.random() * 30) + 's';
+      body.appendChild(hex);
+    }
+  </script>
+
+</body>
+</html>

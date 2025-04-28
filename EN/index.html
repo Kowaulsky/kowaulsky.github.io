@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cybersecurity Portfolio - Jessy Guirado</title>
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const img = document.getElementById('profile-img');
+    const onlineSrc = '/assets/images/online_profile_picture.png';
+    const realSrc = '/assets/images/real_life_picture.png';
+    let showingReal = false;
+
+    function swapImage() {
+      // fade out
+      img.style.opacity = 0;
+      const onFadeOut = () => {
+        img.removeEventListener('transitionend', onFadeOut);
+        // change the source
+        img.src = showingReal ? onlineSrc : realSrc;
+        showingReal = !showingReal;
+        // fade in
+        requestAnimationFrame(() => {
+          img.style.opacity = 1;
+        });
+      };
+      img.addEventListener('transitionend', onFadeOut);
+    }
+
+    // On load: indicate clickability
+    setTimeout(swapImage, 500);   // swap to real photo
+    setTimeout(swapImage, 2000);  // swap back to online
+
+    // On click: swap
+    img.addEventListener('click', swapImage);
+  });
+</script>
+
+<body>
+
+  <!-- Geometric background elements -->
+  <div class="cyber-bg-element"></div>
+  <div class="cyber-bg-element"></div>
+  <div class="cyber-bg-element"></div>
+
+  <header>
+
+    <body>
+      <!-- always-on “Switch to English” button -->
+      <div class="lang-switch">
+        <a href="/FR/index.html">
+          <img src="/assets/images/skills_icons/french.png" alt="French" class="lang-icon">
+          français
+        </a>
+      </div>
+
+      <div class="profile-pic-container">
+        <img id="profile-img" src="/assets/images/online_profile_picture.png" alt="Profile photo" />
+      </div>
+      <h1>Jessy Guirado</h1>
+      <p style="margin-top: -10px; color: #58a6ff; font-weight: bold; font-size: 1.3em;">Kowaulsky</p>
+      <p>Offensive cybersecurity student, passionate about software development.</p>
+
+      <div class="intro-buttons">
+        <a href="#motivation">Motivation</a>
+        <a href="#cv">CV</a>
+        <a href="#school-projects">School Projects</a>
+        <a href="#experiences">Experience</a>
+        <a href="#personal-projects">Personal</a>
+      </div>
+  </header>
+
+  <section id="motivation">
+    <h2>Cover Letter</h2>
+    <p>Dear Sir or Madam,</p>
+    <p>Currently a first-year computer engineering student at Polytech Nantes, I have a dual passion: offensive
+      cybersecurity and software development. Through my background—including creating personal projects such as Apollo,
+      a Wi-Fi auditing tool in Go, and my experiences on the TryHackMe platform (Omni rank)—I have developed strong
+      skills in Golang, Python, Java, and proficiency with both Linux and Windows environments.</p>
+    <p>Detail-oriented, curious, and a true team player, I adapt quickly to varied contexts and take on technical
+      challenges with confidence. I regularly conduct vulnerability analyses, produce clear reports, and offer
+      operational recommendations, all while adhering to security best practices and software quality standards.</p>
+    <p>Regardless of your organization’s size, industry, or structure, I am convinced I can bring enthusiasm and
+      emerging expertise to your team. My goal is to contribute actively to protecting information systems and the
+      success of your projects, while continuing to learn alongside experienced professionals.</p>
+    <p>Available immediately for an internship or entry-level position, I would be delighted to meet with you to discuss
+      my achievements and motivations. I look forward to your response and remain, Sir or Madam, yours faithfully.</p>
+    <div class="cv-download-container">
+      <a href="/EN/pdf/lettre_de_motivation.pdf" class="download-cv" target="_blank">
+        Download my cover letter (PDF)
+      </a>
+    </div>
+  </section>
+
+  <section id="cv">
+    <h2>Curriculum Vitae</h2>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 30px; margin-top: 30px;">
+
+      <!-- Education -->
+      <div
+        style="flex: 1; min-width: 280px; background: #0d1117; padding: 20px; border: 2px solid #58a6ff33; border-radius: 8px; box-shadow: 0 4px 15px rgba(88, 166, 255, 0.2);">
+        <h3 style="color: #58a6ff; border-bottom: 1px solid #30363d; padding-bottom: 10px; margin-bottom: 20px;">
+          Education
+        </h3>
+        <ul class="with-icons" style="list-style: none; padding: 0;">
+          <li>
+            <img src="/assets/images/formation_icons/polytech.jpg" alt="Polytech Nantes" class="item-icon" />
+            <div class="item-content">
+              <div class="item-date"><strong>2024 - 2030</strong></div>
+              <div class="item-title">Engineering Degree in Computer Science</div>
+              <div class="item-specs">Polytech Nantes</div>
+            </div>
+          </li>
+          <li>
+            <img src="/assets/images/formation_icons/livet.jpeg" alt="Eugène-Livet High School" class="item-icon" />
+            <div class="item-content">
+              <div class="item-date"><strong>2021 - 2024</strong></div>
+              <div class="item-title">STI2D-SIN Baccalaureate (Honors)</div>
+              <div class="item-specs">Eugène-Livet High School, Nantes</div>
+            </div>
+          </li>
+          <li>
+            <img src="/assets/images/formation_icons/pvis.png" alt="PVIS Vanuatu" class="item-icon" />
+            <div class="item-content">
+              <div class="item-date"><strong>2018 - 2019</strong></div>
+              <div class="item-title">National Diploma (Brevet equivalent)</div>
+              <div class="item-specs">PVIS, Vanuatu</div>
+            </div>
+          </li>
+          <li>
+            <img src="/assets/images/formation_icons/korora.jpeg" alt="Korora Public School" class="item-icon" />
+            <div class="item-content">
+              <div class="item-date"><strong>2014 - 2018</strong></div>
+              <div class="item-title">English Proficiency Certificate</div>
+              <div class="item-specs">Korora Public School, Australia</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Professional Experience -->
+      <div
+        style="flex: 1; min-width: 280px; background: #0d1117; padding: 20px; border: 2px solid #58a6ff33; border-radius: 8px; box-shadow: 0 4px 15px rgba(88, 166, 255, 0.2);">
+        <h3 style="color: #58a6ff; border-bottom: 1px solid #30363d; padding-bottom: 10px; margin-bottom: 20px;">
+          Professional Experience
+        </h3>
+        <ul class="with-icons" style="list-style: none; padding: 0;">
+          <li>
+            <img src="/assets/images/experiences_icons/ventrys.png" alt="Ventrys" class="item-icon" />
+            <div class="item-content">
+              <div class="item-date"><strong>2024 - Present</strong></div>
+              <div class="item-title">Developer - Ventrys</div>
+              <div class="item-specs"><em>Custom mod design and technical problem-solving.</em></div>
+            </div>
+          </li>
+          <li>
+            <img src="/assets/images/experiences_icons/tryhackme.jpg" alt="TryHackMe" class="item-icon" />
+            <div class="item-content">
+              <div class="item-date"><strong>2021 - 2024</strong></div>
+              <div class="item-title">Omni Rank - TryHackMe</div>
+              <div class="item-specs"><em>Cybersecurity and pentesting in real-world scenarios.</em></div>
+            </div>
+          </li>
+          <li>
+            <img src="/assets/images/experiences_icons/codeacademy.png" alt="CodeAcademy Pro" class="item-icon" />
+            <div class="item-content">
+              <div class="item-date"><strong>2013 - 2024</strong></div>
+              <div class="item-title">Student Developer - CodeAcademy Pro</div>
+              <div class="item-specs"><em>Simulated professional problem-solving challenges.</em></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Technical Skills -->
+    <div class="skills-section leds">
+      <h3>Technical Skills</h3>
+
+      <!-- Programming -->
+      <div class="skill-category">
+        <h4>Programming</h4>
+        <div class="skill-item">
+          <img src="/assets/images/skills_icons/python.webp" alt="Python Icon" class="skill-icon"
+            onerror="this.src='/assets/images/icons/fallback.png'" />
+          <div class="skill-content">
+            <span class="skill-name">Python</span>
+            <p class="skill-description">High-performance language for backend development and network tools, used in my
+              cybersecurity projects like Apollo.</p>
+            <div class="skill-level" data-level="100"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <img src="/assets/images/skills_icons/kotlin.png" alt="Kotlin Icon" class="skill-icon"
+            onerror="this.src='/assets/images/icons/fallback.png'" />
+          <div class="skill-content">
+            <span class="skill-name">Kotlin</span>
+            <p class="skill-description">Explored for secure Android application development, featuring concise and
+              modern syntax.</p>
+            <div class="skill-level" data-level="80"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <img src="/assets/images/skills_icons/golang.png" alt="Golang Icon" class="skill-icon"
+            onerror="this.src='/assets/images/icons/fallback.png'" />
+          <div class="skill-content">
+            <span class="skill-name">Golang</span>
+            <p class="skill-description">High-performance language for backend development and network tools, used in my
+              cybersecurity projects like Apollo.</p>
+            <div class="skill-level" data-level="60"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <img src="/assets/images/skills_icons/java.png" alt="Java Icon" class="skill-icon"
+            onerror="this.src='/assets/images/icons/fallback.png'" />
+          <div class="skill-content">
+            <span class="skill-name">Java</span>
+            <p class="skill-description">Used to develop robust Minecraft mods at Ventrys, focusing on performance and
+              security.</p>
+            <div class="skill-level" data-level="60"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <img src="/assets/images/skills_icons/c.png" alt="C Icon" class="skill-icon"
+            onerror="this.src='/assets/images/icons/fallback.png'" />
+          <div class="skill-content">
+            <span class="skill-name">C</span>
+            <p class="skill-description">Used for system-level projects requiring low-level control, such as performance
+              optimization.</p>
+            <div class="skill-level" data-level="40"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Network & Systems Pentesting -->
+      <div class="skill-category">
+        <h4>Network & Systems Pentesting</h4>
+        <div class="skill-item">
+          <img src="/assets/images/skills_icons/pentesting.jpeg" alt="Pentesting Icon" class="skill-icon" />
+          <div class="skill-content">
+            <span class="skill-name">Penetration Testing</span>
+            <p class="skill-description">Simulating controlled attacks to verify network and server resilience.</p>
+            <div class="skill-level" data-level="60"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <img src="/assets/images/skills_icons/linux.png" alt="Linux Icon" class="skill-icon" />
+          <div class="skill-content">
+            <span class="skill-name">Linux Security</span>
+            <p class="skill-description">Evaluating protection mechanisms and fixing vulnerabilities on Linux systems.
+            </p>
+            <div class="skill-level" data-level="50"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <img src="/assets/images/skills_icons/window.webp" alt="Windows Icon" class="skill-icon" />
+          <div class="skill-content">
+            <span class="skill-name">Windows Security</span>
+            <p class="skill-description">Testing access controls and Active Directory robustness.</p>
+            <div class="skill-level" data-level="45"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Wi-Fi & Wireless Security -->
+      <div class="skill-category">
+        <h4>Wi-Fi & Wireless Security</h4>
+        <div class="skill-item">
+          <img src="/assets/images/skills_icons/wpacracking.png" alt="Wi-Fi Cracking Icon" class="skill-icon" />
+          <div class="skill-content">
+            <span class="skill-name">Wi-Fi Cracking & Audits</span>
+            <p class="skill-description">Testing WPA/WPA2 key strength via handshake capture and dictionary attacks.</p>
+            <div class="skill-level" data-level="45"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <img src="/assets/images/skills_icons/mitm.png" alt="Sniffing & MITM Icon" class="skill-icon" />
+          <div class="skill-content">
+            <span class="skill-name">Sniffing & MITM</span>
+            <p class="skill-description">Intercepting and analyzing wireless traffic to detect unencrypted
+              communications.</p>
+            <div class="skill-level" data-level="40"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <img src="/assets/images/skills_icons/configuration.png" alt="Hardening Icon" class="skill-icon" />
+          <div class="skill-content">
+            <span class="skill-name">Wi-Fi Hardening</span>
+            <p class="skill-description">Implementing WPA3, MAC filtering, and segmentation to secure access points.</p>
+            <div class="skill-level" data-level="35"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Web & Application Security -->
+      <div class="skill-category">
+        <h4>Web & Application Security</h4>
+        <div class="skill-item">
+          <img src="/assets/images/skills_icons/webapppentestign.png" alt="Web App Icon" class="skill-icon" />
+          <div class="skill-content">
+            <span class="skill-name">Web App Pentest</span>
+            <p class="skill-description">Identifying vulnerabilities (injections, XSS, CSRF) in online applications.</p>
+            <div class="skill-level" data-level="55"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <img src="/assets/images/skills_icons/api.png" alt="API Icon" class="skill-icon" />
+          <div class="skill-content">
+            <span class="skill-name">API Security</span>
+            <p class="skill-description">Verifying authentication and robustness of web services and APIs.</p>
+            <div class="skill-level" data-level="50"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cryptanalysis & Steganography -->
+      <div class="skill-category">
+        <h4>Cryptanalysis & Steganography</h4>
+        <div class="skill-item">
+          <img src="/assets/images/skills_icons/hashcracking.png" alt="Hash Cracking Icon" class="skill-icon" />
+          <div class="skill-content">
+            <span class="skill-name">Hash Cracking</span>
+            <p class="skill-description">Attempting to recover passwords from encrypted hashes.</p>
+            <div class="skill-level" data-level="65"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <img src="/assets/images/skills_icons/stegano.jpg" alt="Steganography Icon" class="skill-icon" />
+          <div class="skill-content">
+            <span class="skill-name">Steganography</span>
+            <p class="skill-description">Detecting and extracting hidden data from multimedia files.</p>
+            <div class="skill-level" data-level="40"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- OSINT & Social Engineering -->
+      <div class="skill-category">
+        <h4>OSINT & Social Engineering</h4>
+        <div class="skill-item">
+          <img src="/assets/images/skills_icons/osint.png" alt="OSINT Icon" class="skill-icon" />
+          <div class="skill-content">
+            <span class="skill-name">OSINT</span>
+            <p class="skill-description">Researching and analyzing public information to guide security testing.</p>
+            <div class="skill-level" data-level="55"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <img src="/assets/images/skills_icons/socialengineering.png" alt="Phishing Icon" class="skill-icon" />
+          <div class="skill-content">
+            <span class="skill-name">Phishing & SE</span>
+            <p class="skill-description">Designing phishing simulations to raise awareness of risks.</p>
+            <div class="skill-level" data-level="45"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Forensics & Reverse Engineering -->
+      <div class="skill-category">
+        <h4>Forensics & Reverse Engineering</h4>
+        <div class="skill-item">
+          <img src="/assets/images/skills_icons/forensic.jpg" alt="Forensics Icon" class="skill-icon" />
+          <div class="skill-content">
+            <span class="skill-name">Forensics</span>
+            <p class="skill-description">Analyzing logs and memory dumps to reconstruct incidents.</p>
+            <div class="skill-level" data-level="50"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <img src="/assets/images/skills_icons/reverseengineering.webp" alt="Reverse Engineering Icon"
+            class="skill-icon" />
+          <div class="skill-content">
+            <span class="skill-name">Reverse Engineering</span>
+            <p class="skill-description">Studying program behavior to identify internal mechanisms.</p>
+            <div class="skill-level" data-level="40"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Systems -->
+      <div class="skill-category">
+        <h4>Systems</h4>
+        <div class="skill-item">
+          <img src="/assets/images/skills_icons/linux.png" alt="Linux Icon" class="skill-icon"
+            onerror="this.src='/assets/images/icons/fallback.png'" />
+          <div class="skill-content">
+            <span class="skill-name">Linux</span>
+            <p class="skill-description">Advanced Linux administration, bash scripting, and pentesting.</p>
+            <div class="skill-level" data-level="80"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <img src="/assets/images/skills_icons/window.webp" alt="Windows Icon" class="skill-icon"
+            onerror="this.src='/assets/images/icons/fallback.png'" />
+          <div class="skill-content">
+            <span class="skill-name">Windows</span>
+            <p class="skill-description">Windows system management, Active Directory, and vulnerability analysis.</p>
+            <div class="skill-level" data-level="80"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Languages -->
+      <div class="skill-category">
+        <h4>Languages</h4>
+        <div class="skill-item">
+          <img src="/assets/images/skills_icons/english.png" alt="English Icon" class="skill-icon"
+            onerror="this.src='/assets/images/icons/fallback.png'" />
+          <div class="skill-content">
+            <span class="skill-name">English</span>
+            <p class="skill-description">Bilingual proficiency, used in technical and professional contexts.</p>
+            <div class="skill-level" data-level="100"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <img src="/assets/images/skills_icons/french.png" alt="French Icon" class="skill-icon"
+            onerror="this.src='/assets/images/icons/fallback.png'" />
+          <div class="skill-content">
+            <span class="skill-name">French</span>
+            <p class="skill-description">Native language.</p>
+            <div class="skill-level" data-level="100"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Interests -->
+    <section id="centres-interet">
+      <h2>Interests</h2>
+      <ul class="interest-list">
+        <li>Cybersecurity</li>
+        <li>Software Development</li>
+        <li>Travel</li>
+        <li>Philosophy & Sociology</li>
+        <li>History & Politics</li>
+        <li>Jet Surfing</li>
+      </ul>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="contact-section">
+        <p>
+          <strong>Email:</strong>
+          <a id="email-link" href="mailto:jessy.guirado@protonmail.com" class="contact-link">
+            jessy.guirado@protonmail.com
+          </a>
+        </p>
+        <p>
+          <strong>Phone:</strong>
+          <a href="tel:+33659248976" class="contact-link">
+            +33 6 59 24 89 76
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <!-- CV Download Button -->
+    <div class="cv-download-container">
+      <a href="/EN/pdf/CV_Jessy_Guirado.pdf" class="download-cv">
+        Download my full CV (PDF)
+      </a>
+    </div>
+  </section>
+
+  <section id="school-projects" class="projects-section">
+    <h2>School Projects</h2>
+    <div class="projects-grid">
+      <!-- Quadtree Project -->
+      <a href="/EN/projects/quadtree.html" class="project-card-link" target="_blank" rel="noopener noreferrer">
+        <div class="project-card">
+          <img src="/assets/images/projects_logos/quadtree.png" alt="Quadtree Project" class="project-image">
+          <div class="project-content">
+            <h4 class="project-title">Quadtree - 2D Terrain Generation</h4>
+            <p class="project-description">
+              Developed an infinite 2D terrain optimized with a quadtree structure and the Ebitengine framework.
+            </p>
+          </div>
+        </div>
+      </a>
+
+      <!-- Database Project -->
+      <a href="/EN/projects/basededonnees.html" class="project-card-link" target="_blank" rel="noopener noreferrer">
+        <div class="project-card">
+          <img src="/assets/images/projects_logos/basededonnees.png" alt="Database Project" class="project-image">
+          <div class="project-content">
+            <h4 class="project-title">SAE - Database 2025</h4>
+            <p class="project-description">
+              Designed and managed a relational database using regional open data, normalized to 3NF.
+            </p>
+          </div>
+        </div>
+      </a>
+
+      <!-- Bibliofolio Project -->
+      <a href="/EN/projects/bibliofolio.html" class="project-card-link" target="_blank" rel="noopener noreferrer">
+        <div class="project-card">
+          <img src="/assets/images/projects_logos/bibliofolio.png" alt="Bibliofolio" class="project-image">
+          <div class="project-content">
+            <h4 class="project-title">Bibliofolio</h4>
+            <p class="project-description">
+              Static platform showcasing inspiring portfolios in development and cybersecurity, with responsive
+              navigation.
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section id="experiences">
+    <h2>Professional Experience</h2>
+
+    <div style="display: flex; flex-direction: column; gap: 30px; margin-top: 30px;">
+
+      <!-- Ventrys -->
+      <div
+        style="background: #0d1117; padding: 20px; border: 2px solid #58a6ff33; border-radius: 8px; box-shadow: 0 4px 15px rgba(88, 166, 255, 0.3);">
+        <h3 style="color: #58a6ff; margin-bottom: 10px;">Developer - Ventrys <span
+            style="float: right; color: #8b949e; font-size: 0.9em;">2024 - Present</span></h3>
+        <p><strong>Environment:</strong> Medieval Fantasy Roleplay Minecraft</p>
+        <p><strong>Main Mission:</strong> Full development of server systems, including custom mod creation for jobs,
+          creatures, interactions, and game mechanics.</p>
+        <p><strong>Technologies:</strong> Java, Gradle, Fabric, Visual Studio Code</p>
+        <p><strong>Teamwork:</strong> Collaborated with other developers to ensure system coherence and feature
+          security.</p>
+      </div>
+
+      <!-- TryHackMe -->
+      <div
+        style="background: #0d1117; padding: 20px; border: 2px solid #58a6ff33; border-radius: 8px; box-shadow: 0 4px 15px rgba(88, 166, 255, 0.3);">
+        <h3 style="color: #58a6ff; margin-bottom: 10px;">Omni Rank - TryHackMe <span
+            style="float: right; color: #8b949e; font-size: 0.9em;">2021 - 2024</span></h3>
+        <p><strong>Activities:</strong> Intensive offensive cybersecurity training with varied technical challenges
+          (injection, privilege escalation, network analysis, vulnerability exploitation).</p>
+        <p><strong>Profile:</strong> <a href="https://tryhackme.com/p/Kowaulsky" target="_blank"
+            style="color: #58a6ff;">tryhackme.com/p/Kowaulsky</a></p>
+        <p><strong>Work:</strong> Practical scenarios with vulnerable system analysis, vulnerability reporting, and
+          documentation of simulated attacks.</p>
+        <p><strong>Skills Gained:</strong> Pentesting, OSINT, exploitation, basic forensics.</p>
+      </div>
+
+      <!-- CodeAcademy Pro -->
+      <div
+        style="background: #0d1117; padding: 20px; border: 2px solid #58a6ff33; border-radius: 8px; box-shadow: 0 4px 15px rgba(88, 166, 255, 0.3);">
+        <h3 style="color: #58a6ff; margin-bottom: 10px;">Student Developer - CodeAcademy Pro <span
+            style="float: right; color: #8b949e; font-size: 0.9em;">2013 - 2024</span></h3>
+        <p><strong>Training:</strong> Learned software development fundamentals and core algorithm/data structure
+          concepts (binary trees, etc.).</p>
+        <p><strong>Technologies:</strong> Python, Golang, introductory C++</p>
+        <p><strong>Work:</strong> Developed simple applications and solved practical problems to strengthen programming
+          logic.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="personal-projects">
+    <h2>Personal Projects & Passions</h2>
+
+    <!-- Personal Projects -->
+    <div style="margin-top: 40px;">
+      <h3
+        style="color: #58a6ff; border-bottom: 2px solid #30363d; padding-bottom: 8px; margin-bottom: 20px; font-size: 1.6em;">
+        Personal Projects</h3>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+
+        <!-- NexProbe -->
+        <a href="/EN/projects/nexprobe.html" target="_blank" class="project-card-link">
+          <div class="project-card">
+            <img src="/assets/images/projects_logos/nexprobe.png" alt="NexProbe Logo" class="project-image">
+            <div class="project-content">
+              <h4 class="project-title">NexProbe</h4>
+              <p class="project-description">
+                Advanced pentesting tool automating network reconnaissance with Nmap, smbmap, and ldapsearch.
+              </p>
+              <p class="project-tech"><strong>Technologies:</strong> Python, Linux</p>
+            </div>
+          </div>
+        </a>
+
+        <!-- Apollo -->
+        <a href="/EN/projects/apollo.html" target="_blank" class="project-card-link">
+          <div class="project-card">
+            <img src="/assets/images/projects_logos/apollo.png" alt="Apollo Logo" class="project-image">
+            <div class="project-content">
+              <h4 class="project-title">Apollo</h4>
+              <p class="project-description">
+                Private alternative to Aircrack-ng developed in Go for legal Wi-Fi audits.
+              </p>
+              <p class="project-tech"><strong>Technologies:</strong> Golang</p>
+            </div>
+          </div>
+        </a>
+
+        <!-- Maison Chevalier Bot -->
+        <a href="/EN/projects/botdiscord.html" target="_blank" class="project-card-link">
+          <div class="project-card">
+            <img src="/assets/images/projects_logos/maison_chevalier_bot.png" alt="Maison Chevalier Bot Logo"
+              class="project-image">
+            <div class="project-content">
+              <h4 class="project-title">"Maison Chevalier" Bot</h4>
+              <p class="project-description">
+                Custom bot to automate shop management on a roleplay server: stock, hours, client accounts.
+              </p>
+              <p class="project-tech"><strong>Technologies:</strong> Node.js, Discord.js</p>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- Personal Passions -->
+    <div style="margin-top: 60px;">
+      <h3
+        style="color: #58a6ff; border-bottom: 2px solid #30363d; padding-bottom: 8px; margin-bottom: 20px; font-size: 1.6em;">
+        Personal Passions</h3>
+      <div
+        style="background: #0d1117; border: 2px solid #58a6ff33; border-radius: 8px; box-shadow: 0 4px 15px rgba(88, 166, 255, 0.3); padding: 25px; line-height: 1.6;">
+
+        <h4 style="color: #58a6ff; margin-bottom: 8px;">Homebrewing</h4>
+        <p>Passionate about crafting artisan mead, cider, and wine; developed many recipes for family and friends,
+          experimenting with varied fermentation processes.</p>
+
+        <h4 style="color: #58a6ff; margin-top: 20px; margin-bottom: 8px;">Philosophy & Sociology</h4>
+        <p>I regularly explore social and philosophical concepts through in-depth personal research. This curiosity
+          helps me better understand human behavior—a valuable asset for social engineering in cybersecurity.</p>
+
+        <h4 style="color: #58a6ff; margin-top: 20px; margin-bottom: 8px;">Jet Surfing</h4>
+        <p>Sport practiced mainly during my years in Australia and Vanuatu, combining speed and mastery of the aquatic
+          environment. I aim to resume this activity as soon as possible in France.</p>
+
+        <h4 style="color: #58a6ff; margin-top: 20px; margin-bottom: 8px;">Constructed Language: Nuveldan</h4>
+        <p>Creator of Nuveldan, an original constructed language inspired by Celtic and Germanic tongues, featuring
+          complex grammar and vocabulary to form a unique, independent linguistic system.</p>
+
+      </div>
+    </div>
+
+  </section>
+
+  <footer>
+    <div class="footer-social">
+      <a href="https://github.com/Kowaulsky" target="_blank" rel="noopener noreferrer">
+        <img src="/assets/images/social_icons/github.webp" alt="GitHub" class="footer-icon">
+      </a>
+      <a href="https://discord.com/users/345417381520343050" target="_blank" rel="noopener noreferrer">
+        <img src="/assets/images/social_icons/discord.jpg" alt="Discord" class="footer-icon">
+      </a>
+      <a href="https://tryhackme.com/p/Kowaulsky" target="_blank" rel="noopener noreferrer">
+        <img src="/assets/images/social_icons/tryhackme.png" alt="TryHackMe" class="footer-icon">
+      </a>
+    </div>
+
+    <p>© 2025 Jessy Guirado – Portfolio</p>
+  </footer>
+
+  <script>
+    // Skill item flip interaction
+    const skillItems = document.querySelectorAll('.skill-item');
+    skillItems.forEach(item => {
+      item.addEventListener('click', () => {
+        item.classList.toggle('flipped');
+      });
+    });
+  </script>
+
+  <script>
+    const numberOfHexagons = 50; // Total number of hexagons
+    const body = document.body;
+
+    for (let i = 0; i < numberOfHexagons; i++) {
+      const hex = document.createElement('div');
+      hex.classList.add('cyber-bg-element');
+
+      // Random positioning
+      hex.style.top = Math.random() * 100 + 'vh';
+      hex.style.left = Math.random() * 100 + 'vw';
+
+      // Random size
+      const size = Math.random() * 60 + 40; // Between 40px and 100px
+      hex.style.width = size + 'px';
+      hex.style.height = size + 'px';
+
+      // Random animation speed
+      const duration = Math.random() * 30 + 20; // 20 to 50 seconds
+      hex.style.animationDuration = duration + 's';
+
+      body.appendChild(hex);
+    }
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const user = 'jessy.guirado';       // your user
+      const domain = 'protonmail.com';     // your domain
+      const email = user + '@' + domain;
+      const a = document.getElementById('email-link');
+      a.href = 'mailto:' + email;
+      a.textContent = email;
+    });
+  </script>
+</body>
+
+</html>

@@ -33,7 +33,7 @@
 
     // Au chargement : indication cliquabilité
     setTimeout(swapImage, 500);   // swap vers la vraie photo
-    setTimeout(swapImage, 2000);  // swap retour vers l’online
+    setTimeout(swapImage, 2000);  // swap retour vers l'online
 
     // Au clic : swap
     img.addEventListener('click', swapImage);
@@ -66,8 +66,28 @@
 
   <section id="motivation">
     <h2>Lettre de motivation</h2>
-    <p>Ma lettre de motivation personnalisée sera bientôt ajoutée ici pour accompagner ma candidature auprès des
-      recruteurs du domaine cybersécurité.</p>
+    <p>Madame, Monsieur,</p>
+    <p>Actuellement étudiant en première année d'ingénierie informatique à Polytech Nantes, je suis animé par une double
+      passion : la cybersécurité offensive et le développement logiciel. Grâce à mon parcours - notamment la création de
+      projets personnels tels qu'Apollo, un outil d'audit Wi-Fi en Go, et mes expériences sur la plateforme TryHackMe
+      (rang Omni) - j'ai développé des compétences solides en Golang, Python, Java et maîtrise des environnements Linux
+      et Windows.</p>
+    <p>Rigoureux, curieux et doté d'un réel esprit d'équipe, je sais m'adapter rapidement à des contextes variés et
+      relever des défis techniques. J'ai l'habitude de conduire des analyses de vulnérabilités, de produire des rapports
+      clairs et de proposer des préconisations opérationnelles, tout en respectant les bonnes pratiques de sécurité et
+      de qualité logicielle.</p>
+    <p>Quelle que soit la taille, le secteur d'activité ou l'organisation de votre structure, je suis convaincu de
+      pouvoir y apporter enthousiasme et expertise naissante. Mon objectif est de contribuer activement à la protection
+      des systèmes d'information et au succès de vos projets, tout en continuant à apprendre au contact de
+      professionnels expérimentés.</p>
+    <p>Disponible immédiatement pour un stage ou un premier emploi, je serais ravi de vous rencontrer pour échanger sur
+      mes réalisations et mes motivations. Dans l'attente de votre retour, je vous prie d'agréer, Madame, Monsieur,
+      l'expression de mes salutations distinguées.</p>
+    <div class="cv-download-container">
+      <a href="/pdf/lettre_de_motivation.pdf" class="download-cv" target="_blank">
+        Télécharger ma lettre de motivation (PDF)
+      </a>
+    </div>
   </section>
 
   <section id="cv">
@@ -128,7 +148,7 @@
             <img src="assets/images/experiences_icons/ventrys.png" alt="Ventrys" class="item-icon" />
             <div class="item-content">
               <div class="item-date"><strong>2024 - Actuel</strong></div>
-              <div class="item-title">Développeur – Ventrys</div>
+              <div class="item-title">Développeur - Ventrys</div>
               <div class="item-specs"><em>Conception de mods personnalisés et résolution de problèmes techniques.</em>
               </div>
             </div>
@@ -137,7 +157,7 @@
             <img src="assets/images/experiences_icons/tryhackme.jpg" alt="TryHackMe" class="item-icon" />
             <div class="item-content">
               <div class="item-date"><strong>2021 - 2024</strong></div>
-              <div class="item-title">Rang Omni – TryHackMe</div>
+              <div class="item-title">Rang Omni - TryHackMe</div>
               <div class="item-specs"><em>Cybersécurité et pentesting sur scénarios réels.</em></div>
             </div>
           </li>
@@ -145,7 +165,7 @@
             <img src="assets/images/experiences_icons/codeacademy.png" alt="CodeAcademy Pro" class="item-icon" />
             <div class="item-content">
               <div class="item-date"><strong>2013 - 2024</strong></div>
-              <div class="item-title">Développeur (étudiant) – CodeAcademy Pro</div>
+              <div class="item-title">Développeur (étudiant) - CodeAcademy Pro</div>
               <div class="item-specs"><em>Résolution de problèmes professionnels simulés.</em></div>
             </div>
           </li>
@@ -165,7 +185,7 @@
           <img src="assets/images/skills_icons/python.webp" alt="Python Icon" class="skill-icon"
             onerror="this.src='assets/images/icons/fallback.png'" />
           <div class="skill-content">
-            <span class="skill-name">Golang</span>
+            <span class="skill-name">Python</span>
             <p class="skill-description">Langage performant pour le développement backend et les outils réseau, utilisé
               dans mes projets de cybersécurité comme Apollo.</p>
             <div class="skill-level" data-level="100"></div>
@@ -213,20 +233,176 @@
         </div>
       </div>
 
-      <!-- Cybersécurité -->
+      <!-- Pentesting Réseau & Systèmes -->
       <div class="skill-category">
-        <h4>Cybersécurité</h4>
+        <h4>Pentesting Réseau & Systèmes</h4>
         <div class="skill-item">
-          <img src="assets/images/skills_icons/pentesting.jpeg" alt="Pentesting Icon" class="skill-icon"
-            onerror="this.src='assets/images/icons/fallback.png'" />
+          <img src="assets/images/skills_icons/pentesting.jpeg" alt="Pentesting Icon" class="skill-icon" />
           <div class="skill-content">
-            <span class="skill-name">Pentesting</span>
-            <p class="skill-description">Expertise en tests d'intrusion réseau et applicatif, développée via TryHackMe
-              et projets comme NexProbe.</p>
-            <div class="skill-level" data-level="80"></div>
+            <span class="skill-name">Tests d’intrusion</span>
+            <p class="skill-description">
+              Simuler des attaques contrôlées pour vérifier la résistance des réseaux et serveurs.
+            </p>
+            <div class="skill-level" data-level="60"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <img src="assets/images/skills_icons/linux.png" alt="Linux Icon" class="skill-icon" />
+          <div class="skill-content">
+            <span class="skill-name">Sécurité Linux</span>
+            <p class="skill-description">
+              Évaluer les mécanismes de protection et corriger les vulnérabilités sur systèmes Linux.
+            </p>
+            <div class="skill-level" data-level="50"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <img src="assets/images/skills_icons/window.webp" alt="Windows Icon" class="skill-icon" />
+          <div class="skill-content">
+            <span class="skill-name">Sécurité Windows</span>
+            <p class="skill-description">
+              Tester la robustesse des contrôles d’accès et Active Directory.
+            </p>
+            <div class="skill-level" data-level="45"></div>
           </div>
         </div>
       </div>
+
+      <!-- Wi-Fi & Sécurité sans fil -->
+      <div class="skill-category">
+        <h4>Wi-Fi & Sécurité sans fil</h4>
+        <div class="skill-item">
+          <img src="assets/images/skills_icons/wpacracking.png" alt="Wi-Fi Cracking Icon" class="skill-icon" />
+          <div class="skill-content">
+            <span class="skill-name">Cracking & Audits Wi-Fi</span>
+            <p class="skill-description">
+              Tester la force des clés WPA/WPA2 via capture de handshake et attaques par dictionnaire.
+            </p>
+            <div class="skill-level" data-level="45"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <img src="assets/images/skills_icons/mitm.png" alt="Sniffing & MITM Icon" class="skill-icon" />
+          <div class="skill-content">
+            <span class="skill-name">Sniffing & MITM</span>
+            <p class="skill-description">
+              Interception et analyse du trafic sans fil pour détecter les communications non chiffrées.
+            </p>
+            <div class="skill-level" data-level="40"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <img src="assets/images/skills_icons/configuration.png" alt="Hardening Icon" class="skill-icon" />
+          <div class="skill-content">
+            <span class="skill-name">Renforcement Wi-Fi</span>
+            <p class="skill-description">
+              Mettre en place WPA3, filtrage MAC et segmentation pour sécuriser les points d’accès.
+            </p>
+            <div class="skill-level" data-level="35"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sécurité Web & Applications -->
+      <div class="skill-category">
+        <h4>Sécurité Web & Applications</h4>
+        <div class="skill-item">
+          <img src="assets/images/skills_icons/webapppentestign.png" alt="Web App Icon" class="skill-icon" />
+          <div class="skill-content">
+            <span class="skill-name">Web App Pentest</span>
+            <p class="skill-description">
+              Identifier les failles (injections, XSS, CSRF) sur les applications en ligne.
+            </p>
+            <div class="skill-level" data-level="55"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <img src="assets/images/skills_icons/api.png" alt="API Icon" class="skill-icon" />
+          <div class="skill-content">
+            <span class="skill-name">Sécurité API</span>
+            <p class="skill-description">
+              Vérifier l’authentification et la robustesse des services web et API.
+            </p>
+            <div class="skill-level" data-level="50"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cryptanalyse & Stéganographie -->
+      <div class="skill-category">
+        <h4>Cryptanalyse & Stéganographie</h4>
+        <div class="skill-item">
+          <img src="assets/images/skills_icons/hashcracking.png" alt="Crypto Icon" class="skill-icon" />
+          <div class="skill-content">
+            <span class="skill-name">Hash Cracking</span>
+            <p class="skill-description">
+              Essayer de retrouver des mots de passe à partir d’empreintes chiffrées.
+            </p>
+            <div class="skill-level" data-level="65"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <img src="assets/images/skills_icons/stegano.jpg" alt="Stego Icon" class="skill-icon" />
+          <div class="skill-content">
+            <span class="skill-name">Stéganographie</span>
+            <p class="skill-description">
+              Détecter et extraire des données dissimulées dans des fichiers multimédias.
+            </p>
+            <div class="skill-level" data-level="40"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- OSINT & Ingénierie Sociale -->
+      <div class="skill-category">
+        <h4>OSINT & Ingénierie Sociale</h4>
+        <div class="skill-item">
+          <img src="assets/images/skills_icons/osint.png" alt="OSINT Icon" class="skill-icon" />
+          <div class="skill-content">
+            <span class="skill-name">OSINT</span>
+            <p class="skill-description">
+              Rechercher et analyser des informations publiques pour guider les tests de sécurité.
+            </p>
+            <div class="skill-level" data-level="55"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <img src="assets/images/skills_icons/socialengineering.png" alt="Phishing Icon" class="skill-icon" />
+          <div class="skill-content">
+            <span class="skill-name">Phishing & SE</span>
+            <p class="skill-description">
+              Concevoir des simulations d’hameçonnage pour sensibiliser aux risques.
+            </p>
+            <div class="skill-level" data-level="45"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Forensic & Reverse Engineering -->
+      <div class="skill-category">
+        <h4>Forensic & Reverse Engineering</h4>
+        <div class="skill-item">
+          <img src="assets/images/skills_icons/forensic.jpg" alt="Forensic Icon" class="skill-icon" />
+          <div class="skill-content">
+            <span class="skill-name">Forensique</span>
+            <p class="skill-description">
+              Analyser journaux et captures mémoire pour reconstituer un incident.
+            </p>
+            <div class="skill-level" data-level="50"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <img src="assets/images/skills_icons/reverseengineering.webp" alt="Reverse Icon" class="skill-icon" />
+          <div class="skill-content">
+            <span class="skill-name">Reverse Engineering</span>
+            <p class="skill-description">
+              Étudier le fonctionnement d’un programme pour identifier ses mécanismes internes.
+            </p>
+            <div class="skill-level" data-level="40"></div>
+          </div>
+        </div>
+      </div>
+
 
       <!-- Systèmes -->
       <div class="skill-category">
@@ -236,8 +412,7 @@
             onerror="this.src='assets/images/icons/fallback.png'" />
           <div class="skill-content">
             <span class="skill-name">Linux</span>
-            <p class="skill-description">Administration avancée de systèmes Linux pour serveurs et outils de pentesting,
-              avec scripting bash.</p>
+            <p class="skill-description">Administration avancée de systèmes Linux, scripting bash et pentesting.</p>
             <div class="skill-level" data-level="80"></div>
           </div>
         </div>
@@ -246,8 +421,7 @@
             onerror="this.src='assets/images/icons/fallback.png'" />
           <div class="skill-content">
             <span class="skill-name">Windows</span>
-            <p class="skill-description">Gestion de systèmes Windows, incluant Active Directory et analyse de
-              vulnérabilités réseau.</p>
+            <p class="skill-description">Gestion de systèmes Windows, Active Directory et analyse de vulnérabilités.</p>
             <div class="skill-level" data-level="80"></div>
           </div>
         </div>
@@ -261,8 +435,7 @@
             onerror="this.src='assets/images/icons/fallback.png'" />
           <div class="skill-content">
             <span class="skill-name">Anglais</span>
-            <p class="skill-description">Niveau bilingue, certifié en Australie, utilisé dans des contextes techniques
-              et professionnels ainsi que dans la vie quotidienne.</p>
+            <p class="skill-description">Niveau bilingue, utilisé dans des contextes techniques et professionnels.</p>
             <div class="skill-level" data-level="100"></div>
           </div>
         </div>
@@ -279,12 +452,9 @@
     </div>
 
     <!-- Centres d'intérêt -->
-    <div
-      style="margin-top: 30px; background: #0d1117; padding: 20px; border: 2px solid #58a6ff33; border-radius: 8px; box-shadow: 0 4px 15px rgba(88, 166, 255, 0.2);">
-      <h3 style="color: #58a6ff; border-bottom: 1px solid #30363d; padding-bottom: 10px; margin-bottom: 20px;">Centres
-        d'intérêt</h3>
-      <ul
-        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; list-style: none; padding: 0;">
+    <section id="centres-interet">
+      <h2>Centres d'intérêt</h2>
+      <ul class="interest-list">
         <li>Cybersécurité</li>
         <li>Développement logiciel</li>
         <li>Voyager</li>
@@ -292,25 +462,30 @@
         <li>Histoire & Politique</li>
         <li>Jet Surfing</li>
       </ul>
-    </div>
+    </section>
 
     <!-- Contact -->
-    <div
-      style="margin-top: 30px; background: #0d1117; padding: 20px; border: 2px solid #58a6ff33; border-radius: 8px; box-shadow: 0 4px 15px rgba(88, 166, 255, 0.2);">
-      <h3 style="color: #58a6ff; border-bottom: 1px solid #30363d; padding-bottom: 10px; margin-bottom: 20px;">Contact
-      </h3>
-      <ul style="list-style: none; padding: 0;">
-        <li>
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="contact-section">
+        <p>
           <strong>Email :</strong>
-          <a id="email-link" href="#">[email protégé]</a>
-        </li>
-        <li><strong>Téléphone :</strong> +33 6 59 24 89 76</li>
-      </ul>
-    </div>
+          <a href="mailto:jessy.guirado@protonmail.com" class="contact-link">
+            jessy.guirado@protonmail.com
+          </a>
+        </p>
+        <p>
+          <strong>Téléphone :</strong>
+          <a href="tel:+33659248976" class="contact-link">
+            +33 6 59 24 89 76
+          </a>
+        </p>
+      </div>
+    </section>
 
     <!-- CV Download Button -->
     <div class="cv-download-container">
-      <a href="assets/docs/CV_Jessy_Guirado.pdf" download="CV_Jessy_Guirado.pdf" class="download-cv">
+      <a href="assets/docs/CV_Jessy_Guirado.pdf" download="/pdf/CV_Jessy_Guirado.pdf" class="download-cv">
         Télécharger mon CV complet (PDF)
       </a>
     </div>
@@ -320,33 +495,47 @@
     <h2>Projets scolaires</h2>
     <div class="projects-grid">
       <!-- Projet Quadtree -->
-      <a href="/projects/quadtree.html" class="project-card-link" target="_blank">
+      <a href="/projects/quadtree.html" class="project-card-link" target="_blank" rel="noopener noreferrer">
         <div class="project-card">
           <img src="/assets/images/projects_logos/quadtree.png" alt="Projet Quadtree" class="project-image">
           <div class="project-content">
-            <h4 class="project-title">Quadtree – Génération de terrain 2D</h4>
+            <h4 class="project-title">Quadtree - Génération de terrain 2D</h4>
             <p class="project-description">
               Développement d'un terrain 2D infini optimisé avec une structure Quadtree et moteur Ebitengine.
             </p>
           </div>
         </div>
       </a>
-  
+
       <!-- Projet Base de Données -->
-      <a href="/projects/basededonnees.html" class="project-card-link" target="_blank">
+      <a href="/projects/basededonnees.html" class="project-card-link" target="_blank" rel="noopener noreferrer">
         <div class="project-card">
           <img src="/assets/images/projects_logos/basededonnees.png" alt="Projet Base de Données" class="project-image">
           <div class="project-content">
-            <h4 class="project-title">SAE – Base de Données 2025</h4>
+            <h4 class="project-title">SAE - Base de Données 2025</h4>
             <p class="project-description">
-              Conception et exploitation d'une base de données relationnelle à partir d'open data régionale, normalisée en 3FN.
+              Conception et exploitation d'une base de données relationnelle à partir d'open data régionale, normalisée
+              en 3FN.
+            </p>
+          </div>
+        </div>
+      </a>
+
+      <!-- Nouveau Projet Bibliofolio -->
+      <a href="/projects/bibliofolio.html" class="project-card-link" target="_blank" rel="noopener noreferrer">
+        <div class="project-card">
+          <img src="/assets/images/projects_logos/bibliofolio.png" alt="Bibliofolio" class="project-image">
+          <div class="project-content">
+            <h4 class="project-title">Bibliofolio</h4>
+            <p class="project-description">
+              Plateforme statique listant des portfolios inspirants en développement et cybersécurité, avec navigation
+              et responsive design.
             </p>
           </div>
         </div>
       </a>
     </div>
   </section>
-  
 
   <section id="experiences">
     <h2>Expériences professionnelles</h2>
@@ -435,7 +624,7 @@
         </a>
 
         <!-- Bot Discord Shop -->
-        <a href="/projects/botdiscord.html"  target="_blank" class="project-card-link">
+        <a href="/projects/botdiscord.html" target="_blank" class="project-card-link">
           <div class="project-card">
             <img src="assets/images/projects_logos/maison_chevalier_bot.png" alt="Bot Maison Chevalier Logo"
               class="project-image">
@@ -451,7 +640,7 @@
         </a>
 
         <!-- Autres outils cybersécurité -->
-        <div style="grid-column: 1 / -1;" class="project-card">
+        <!-- <div style="grid-column: 1 / -1;" class="project-card">
           <div class="project-content"
             style="display: flex; flex-direction: column; align-items: center; text-align: center;">
             <h4 class="project-title">Autres outils de cybersécurité</h4>
@@ -462,7 +651,7 @@
               <strong>Objectif :</strong> Stress testing et résilience réseau.
             </p>
           </div>
-        </div>
+        </div> -->
 
       </div>
     </div>
@@ -472,7 +661,6 @@
       <h3
         style="color: #58a6ff; border-bottom: 2px solid #30363d; padding-bottom: 8px; margin-bottom: 20px; font-size: 1.6em;">
         Passions personnelles</h3>
-
       <div
         style="background: #0d1117; border: 2px solid #58a6ff33; border-radius: 8px; box-shadow: 0 4px 15px rgba(88, 166, 255, 0.3); padding: 25px; line-height: 1.6;">
 
@@ -501,16 +689,16 @@
   <footer>
     <div class="footer-social">
       <a href="https://github.com/Kowaulsky" target="_blank" rel="noopener noreferrer">
-        <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+        <img src="/assets/images/social_icons/github.webp" alt="GitHub" class="footer-icon">
       </a>
       <a href="https://discord.com/users/345417381520343050" target="_blank" rel="noopener noreferrer">
-        <img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord">
+        <img src="/assets/images/social_icons/discord.jpg" alt="Discord" class="footer-icon">
       </a>
       <a href="https://tryhackme.com/p/Kowaulsky" target="_blank" rel="noopener noreferrer">
-        <img src="https://img.shields.io/badge/TryHackMe-0A0A0A?style=for-the-badge&logo=tryhackme&logoColor=white" alt="TryHackMe">
+        <img src="/assets/images/social_icons/tryhackme.png" alt="TryHackMe" class="footer-icon">
       </a>
     </div>
-    
+
     <p>© 2025 GUIRAO Jessy - Portfolio</p>
   </footer>
 
@@ -523,8 +711,6 @@
       });
     });
   </script>
-
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 
   <script>
     const numberOfHexagons = 50; // Nombre total d'hexagones

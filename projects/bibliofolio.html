@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bibliofolio – Portfolio de Jessy Guirado</title>
+  <link rel="stylesheet" href="/assets/css/main.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1 style="color: #58a6ff; margin-bottom: 10px;">Bibliofolio</h1>
+    <nav>
+      <a href="/index.html" class="btn-retour">&larr; Retour au portfolio</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section>
+      <img src="/assets/images/projects_logos/bibliofolio.png" alt="Screenshot Bibliofolio" class="project-logo" />
+      <p style="text-align: center;">
+        Bibliofolio est une plateforme web statique qui rassemble une collection de portfolios inspirants en développement, cybersécurité et technologies. Grâce à une interface simple et épurée, l’utilisateur peut découvrir et sélectionner des projets pour en savoir plus.
+      </p>
+    </section>
+
+    <!-- BADGES TECH -->
+    <section style="text-align: center;">
+      <a href="https://developer.mozilla.org/fr/docs/Web/HTML" class="badge" target="_blank" rel="noopener noreferrer">
+        <img alt="HTML5" src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
+      </a>
+      <a href="https://developer.mozilla.org/fr/docs/Web/CSS" class="badge" target="_blank" rel="noopener noreferrer">
+        <img alt="CSS3" src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
+      </a>
+      <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript" class="badge" target="_blank" rel="noopener noreferrer">
+        <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
+      </a>
+      <a href="https://pages.github.com/" class="badge" target="_blank" rel="noopener noreferrer">
+        <img alt="GitHub Pages" src="https://img.shields.io/badge/GitHub%20Pages-181717?style=for-the-badge&logo=github&logoColor=white" />
+      </a>
+    </section>
+
+    <!-- FONCTIONNALITÉS -->
+    <section>
+      <h2>Fonctionnalités</h2>
+      <div class="features-grid">
+
+        <div class="feature-card">
+          <div style="font-size: 3em; margin-bottom: 10px;">📚</div>
+          <h3>Catalogue de portfolios</h3>
+          <p>Affichage d'une galerie de portfolios inspirants en développement et cybersécurité.</p>
+        </div>
+
+        <div class="feature-card">
+          <div style="font-size: 3em; margin-bottom: 10px;">🔍</div>
+          <h3>Navigation intuitive</h3>
+          <p>Sélection rapide d'un profil pour afficher les détails d’un projet.</p>
+        </div>
+
+        <div class="feature-card">
+          <div style="font-size: 3em; margin-bottom: 10px;">⚙️</div>
+          <h3>Responsive Design</h3>
+          <p>Interface optimisée pour mobile, tablette et bureau.</p>
+        </div>
+
+        <div class="feature-card">
+          <div style="font-size: 3em; margin-bottom: 10px;">📄</div>
+          <h3>Code source ouvert</h3>
+          <p>Projet hébergé sur GitHub et déployé via GitHub Pages.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section style="text-align: center; margin-top: 30px;">
+      <a href="https://github.com/destycoon/Bibliofolio" class="download-cv" target="_blank" rel="noopener noreferrer" style="margin: 5px;">
+        Voir le dépôt GitHub
+      </a>
+      <a href="https://destycoon.github.io/Bibliofolio/" class="download-cv" target="_blank" rel="noopener noreferrer" style="margin: 5px;">
+        Visiter la version en ligne
+      </a>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2025 Jessy Guirado – Portfolio</p>
+  </footer>
+
+  <!-- ANIMATION HEXAGONES -->
+  <script>
+    const body = document.body;
+    for (let i = 0; i < 50; i++) {
+      const hex = document.createElement('div');
+      hex.classList.add('cyber-bg-element');
+      hex.style.top = Math.random() * 100 + 'vh';
+      hex.style.left = Math.random() * 100 + 'vw';
+      const size = 40 + Math.random() * 60;
+      hex.style.width = size + 'px';
+      hex.style.height = size + 'px';
+      hex.style.animationDuration = (20 + Math.random() * 30) + 's';
+      body.appendChild(hex);
+    }
+  </script>
+</body>
+</html>

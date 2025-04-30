@@ -70,10 +70,28 @@ header {
   z-index: 1;
 }
 
-header img, #profile-img {
+header img {
   width: 180px;
   height: 180px;
   border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #58a6ff;
+  box-shadow: 0 0 20px rgba(88,166,255,0.6);
+  margin-bottom: 20px;
+  transition: opacity 0.6s ease-in-out;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  opacity: 1;
+}
+
+#profile-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 20%;
+  transform: scale(1.1); /* zoom permanent */
   border: 4px solid #58a6ff;
   box-shadow: 0 0 20px rgba(88,166,255,0.6);
   margin-bottom: 20px;
@@ -724,4 +742,3 @@ footer {
   transform: scale(1.1);
   box-shadow: 0 0 15px rgba(88,166,255,0.7);
 }
-
